@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!-- Author: Prasanth Suresh(ps32611@uga.edu); Description: Simple world for ur3e robot -->
+<!-- Do not edit/replicate without permission -->
+
+<sdf version="1.6">
+  <world name="default">
+    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane
+      </uri>
+    </include>
+
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun
+      </uri>
+    </include>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+    </physics>
+    
+    <gravity>
+      0.0 0.0 -9.81
+    </gravity>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>2.69836 -0.874828 2.04939 0 0.399643 2.75619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+  </world>
+</sdf>

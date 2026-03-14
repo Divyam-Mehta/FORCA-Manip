@@ -1,0 +1,240 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+      
+
+    io_and_status_controller_ur1:
+      type: ur_controllers/GPIOController
+
+    speed_scaling_state_broadcaster_ur1:
+      type: ur_controllers/SpeedScalingStateBroadcaster
+
+    force_torque_sensor_broadcaster_ur1:
+      type: ur_controllers/ForceTorqueStateBroadcaster
+
+    joint_trajectory_controller_ur1:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    scaled_joint_trajectory_controller_ur1:
+      type: ur_controllers/ScaledJointTrajectoryController
+
+    # forward_velocity_controller_ur1:
+    #   type: velocity_controllers/JointGroupVelocityController
+
+    # forward_position_controller_ur1:
+    #   type: position_controllers/JointGroupPositionController
+
+    
+
+    io_and_status_controller_ur2:
+      type: ur_controllers/GPIOController
+
+    speed_scaling_state_broadcaster_ur2:
+      type: ur_controllers/SpeedScalingStateBroadcaster
+
+    force_torque_sensor_broadcaster_ur2:
+      type: ur_controllers/ForceTorqueStateBroadcaster
+
+    joint_trajectory_controller_ur2:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    scaled_joint_trajectory_controller_ur2:
+      type: ur_controllers/ScaledJointTrajectoryController
+
+    forward_velocity_controller_ur2:
+      type: velocity_controllers/JointGroupVelocityController
+
+    forward_position_controller_ur2:
+      type: position_controllers/JointGroupPositionController
+
+
+
+speed_scaling_state_broadcaster_ur1:
+  ros__parameters:
+    state_publish_rate: 100.0
+
+force_torque_sensor_broadcaster_ur1:
+  ros__parameters:
+    sensor_name: UR1_tcp_fts_sensor
+    state_interface_names:
+      - force.x
+      - force.y
+      - force.z
+      - torque.x
+      - torque.y
+      - torque.z
+    frame_id: UR1_tool0
+    topic_name: UR1_ft_data
+
+joint_trajectory_controller_ur1:
+  ros__parameters:
+    joints:
+      - UR1_shoulder_pan_joint
+      - UR1_shoulder_lift_joint
+      - UR1_elbow_joint
+      - UR1_wrist_1_joint
+      - UR1_wrist_2_joint
+      - UR1_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 500.0
+    action_monitor_rate: 100.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR1_shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+
+scaled_joint_trajectory_controller_ur1:
+  ros__parameters:
+    joints:
+      - UR1_shoulder_pan_joint
+      - UR1_shoulder_lift_joint
+      - UR1_elbow_joint
+      - UR1_wrist_1_joint
+      - UR1_wrist_2_joint
+      - UR1_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 500.0
+    action_monitor_rate: 100.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR1_shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      UR1_wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+
+# forward_velocity_controller_ur1:
+#   ros__parameters:
+#     joints:
+#       - UR1_shoulder_pan_joint
+#       - UR1_shoulder_lift_joint
+#       - UR1_elbow_joint
+#       - UR1_wrist_1_joint
+#       - UR1_wrist_2_joint
+#       - UR1_wrist_3_joint
+#     interface_name: velocity
+
+forward_position_controller_ur1:
+  ros__parameters:
+    joints:
+      - UR1_shoulder_pan_joint
+      - UR1_shoulder_lift_joint
+      - UR1_elbow_joint
+      - UR1_wrist_1_joint
+      - UR1_wrist_2_joint
+      - UR1_wrist_3_joint
+
+
+
+force_torque_sensor_broadcaster_ur2:
+  ros__parameters:
+    sensor_name: UR2_tcp_fts_sensor
+    state_interface_names:
+      - force.x
+      - force.y
+      - force.z
+      - torque.x
+      - torque.y
+      - torque.z
+    frame_id: UR2_tool0
+    topic_name: UR2_ft_data
+
+speed_scaling_state_broadcaster_ur2:
+  ros__parameters:
+    state_publish_rate: 100.0
+
+joint_trajectory_controller_ur2:
+  ros__parameters:
+    joints:
+      - UR2_shoulder_pan_joint
+      - UR2_shoulder_lift_joint
+      - UR2_elbow_joint
+      - UR2_wrist_1_joint
+      - UR2_wrist_2_joint
+      - UR2_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 500.0
+    action_monitor_rate: 100.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR2_shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+
+scaled_joint_trajectory_controller_ur2:
+  ros__parameters:
+    joints:
+      - UR2_shoulder_pan_joint
+      - UR2_shoulder_lift_joint
+      - UR2_elbow_joint
+      - UR2_wrist_1_joint
+      - UR2_wrist_2_joint
+      - UR2_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 500.0
+    action_monitor_rate: 100.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR2_shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      UR2_wrist_3_joint: { trajectory: 0.2, goal: 0.1 }
+
+# forward_velocity_controller_ur2:
+#   ros__parameters:
+#     joints:
+#       - UR2_shoulder_pan_joint
+#       - UR2_shoulder_lift_joint
+#       - UR2_elbow_joint
+#       - UR2_wrist_1_joint
+#       - UR2_wrist_2_joint
+#       - UR2_wrist_3_joint
+#     interface_name: velocity
+
+forward_position_controller_ur2:
+  ros__parameters:
+    joints:
+      - UR2_shoulder_pan_joint
+      - UR2_shoulder_lift_joint
+      - UR2_elbow_joint
+      - UR2_wrist_1_joint
+      - UR2_wrist_2_joint
+      - UR2_wrist_3_joint

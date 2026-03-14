@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <model name='onion'>
+    <!-- Set initial pose for the onion model -->
+    <pose frame=''>0.75 -0.25 1.0 0 0 0</pose> <!-- x, y, z and roll, pitch, yaw -->
+
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 0 0</pose> <!-- Local pose within the model -->
+      <inertial>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <mass>0.005</mass>	<!-- From 0.14kg to 0.005kg -->
+        <inertia>
+          <ixx>0.08333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.08333</iyy>
+          <iyz>0</iyz>
+          <izz>0.07780</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__box_collision_collision'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <!-- Commented out mesh collision, using sphere for collision geometry -->
+          <sphere>
+            <radius>0.025</radius>   <!-- 0.05 -->
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>   <!-- 1 1 1 -->
+            <uri>/home/divyam/dual_ur_ws/src/ur_two/meshes/custom_onion.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <plugin name="model_push" filename="libmodel_push.so"/>
+  </model>
+</sdf>

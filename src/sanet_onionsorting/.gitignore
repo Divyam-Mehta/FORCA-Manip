@@ -1,0 +1,4 @@
+**/__pycache__/
+**/examples/*
+**/keras_retinanet/bin/*
+**/*.jpg

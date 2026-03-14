@@ -1,0 +1,16 @@
+Images/left0004.jpg,132,199,163,255,turtlebot_pink
+Images/left0054.jpg,134,197,166,255,turtlebot_pink
+Images/left0120.jpg,136,197,166,255,turtlebot_pink
+Images/left0891.jpg,388,122,502,332,turtlebot_red
+Images/left1025.jpg,84,190,121,251,turtlebot_pink
+Images/left1048.jpg,81,189,117,252,turtlebot_pink
+Images/left1794.jpg,95,131,186,314,turtlebot_pink
+Images/left1794.jpg,334,103,446,339,turtlebot_red
+Images/left1800.jpg,311,99,432,340,turtlebot_red
+Images/left1800.jpg,95,129,185,313,turtlebot_pink
+Images/left1807.jpg,298,102,413,332,turtlebot_red
+Images/left1807.jpg,82,132,188,316,turtlebot_pink
+Images/left2073.jpg,105,179,158,267,turtlebot_red
+Images/left2173.jpg,93,191,130,255,turtlebot_red
+Images/left2275.jpg,81,191,121,251,turtlebot_red
+Images/left20731.jpg,162,152,245,289,turtlebot_red

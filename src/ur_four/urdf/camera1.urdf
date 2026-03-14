@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot name="camera_stand" xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <!-- World link -->
+  <link name="world"/>
+
+  <!-- Material -->
+  <material name="grey">
+    <color rgba="0.6 0.6 0.6 1.0"/>
+  </material>
+
+  <!-- Stand link -->
+  <link name="stand_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.9"/> <!-- 2 cm wide, 1 m tall stand -->
+      </geometry>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/> <!-- Centered at base, cylinder grows upward -->
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="1.0"/>
+      </geometry>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+               iyy="0.001" iyz="0.0"
+               izz="0.0005"/>
+    </inertial>
+  </link>
+
+  <!-- Camera link -->
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <mesh filename="/home/divyam/four_ur_ws/install/ur_four/share/ur_four/meshes/camera.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/divyam/four_ur_ws/install/ur_four/share/ur_four/meshes/camera.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0"
+               iyy="0.0001" iyz="0.0"
+               izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Joint: world to stand -->
+  <joint name="world_to_stand" type="fixed">
+    <parent link="world"/>
+    <child link="stand_link"/>
+    <origin xyz="0.1 0.0624 0" rpy="0 0 0"/>                  
+    <!-- <origin xyz="1.0 1.0 0" rpy="0 0 0"/> -->                  <!--  Camera FAR from BIN  -->>
+  </joint>
+
+  <!-- Joint: stand to camera -->
+  <joint name="stand_to_camera" type="fixed">
+    <parent link="stand_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0 0 0.975" rpy="0 0 1.57"/> <!-- Camera sits 1m above stand base -->
+  </joint>
+
+</robot>

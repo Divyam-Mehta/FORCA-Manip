@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="ur">  <!--name="ur3e"-->
+    <!--GROUPS - Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS - When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS - When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS - When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS - Groups can also be formed by referencing to already defined group names-->
+
+
+
+
+  <virtual_joint name="world_to_UR1" type="fixed" parent_frame="world" child_link="UR1_support_pillar"/>
+  <virtual_joint name="world_to_UR2" type="fixed" parent_frame="world" child_link="UR2_support_pillar"/>
+  <virtual_joint name="world_to_UR3" type="fixed" parent_frame="world" child_link="UR3_support_pillar"/>
+  <virtual_joint name="world_to_UR4" type="fixed" parent_frame="world" child_link="UR4_support_pillar"/>
+
+
+
+
+
+    <group name="UR1_manipulator">
+      <joint name="UR1_shoulder_pan_joint"/>
+      <joint name="UR1_shoulder_lift_joint"/>
+      <joint name="UR1_elbow_joint"/>
+      <joint name="UR1_wrist_1_joint"/>
+      <joint name="UR1_wrist_2_joint"/>
+      <joint name="UR1_wrist_3_joint"/>
+      <chain base_link="UR1_base_link" tip_link="UR1_tool0" />
+    </group>
+
+    <group name="UR2_manipulator">
+      <joint name="UR2_shoulder_pan_joint"/>
+      <joint name="UR2_shoulder_lift_joint"/>
+      <joint name="UR2_elbow_joint"/>
+      <joint name="UR2_wrist_1_joint"/>
+      <joint name="UR2_wrist_2_joint"/>
+      <joint name="UR2_wrist_3_joint"/>
+      <chain base_link="UR2_base_link" tip_link="UR2_tool0"/>
+    </group>
+
+    <group name="UR3_manipulator">
+      <joint name="UR3_shoulder_pan_joint"/>
+      <joint name="UR3_shoulder_lift_joint"/>
+      <joint name="UR3_elbow_joint"/>
+      <joint name="UR3_wrist_1_joint"/>
+      <joint name="UR3_wrist_2_joint"/>
+      <joint name="UR3_wrist_3_joint"/>
+      <chain base_link="UR3_base_link" tip_link="UR3_tool0"/>
+    </group>
+
+    <group name="UR4_manipulator">
+      <joint name="UR4_shoulder_pan_joint"/>
+      <joint name="UR4_shoulder_lift_joint"/>
+      <joint name="UR4_elbow_joint"/>
+      <joint name="UR4_wrist_1_joint"/>
+      <joint name="UR4_wrist_2_joint"/>
+      <joint name="UR4_wrist_3_joint"/>
+      <chain base_link="UR4_base_link" tip_link="UR4_tool0"/>
+    </group>
+
+
+
+    <group name="UR_manipulator">
+      <group name="UR1_manipulator"/>
+      <group name="UR2_manipulator"/>
+      <group name="UR3_manipulator"/>
+      <group name="UR4_manipulator"/>
+    </group>
+
+    <!--GROUP STATES - Purpose - Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="UR1_home" group="UR1_manipulator">
+      <joint name="UR1_elbow_joint" value="0" />
+      <joint name="UR1_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR1_shoulder_pan_joint" value="0" />
+      <joint name="UR1_wrist_1_joint" value="0" />
+      <joint name="UR1_wrist_2_joint" value="0" />
+      <joint name="UR1_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR1_up" group="UR1_manipulator">
+      <joint name="UR1_elbow_joint" value="0" />
+      <joint name="UR1_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR1_shoulder_pan_joint" value="0" />
+      <joint name="UR1_wrist_1_joint" value="-1.5707" />
+      <joint name="UR1_wrist_2_joint" value="0" />
+      <joint name="UR1_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR1_test_configuration" group="UR1_manipulator">
+      <joint name="UR1_elbow_joint" value="1.4" />
+      <joint name="UR1_shoulder_lift_joint" value="-1.62" />
+      <joint name="UR1_shoulder_pan_joint" value="1.54" />
+      <joint name="UR1_wrist_1_joint" value="-1.2" />
+      <joint name="UR1_wrist_2_joint" value="-1.6" />
+      <joint name="UR1_wrist_3_joint" value="-0.11" />
+    </group_state>
+
+    <group_state name="UR2_home" group="UR2_manipulator">
+      <joint name="UR2_elbow_joint" value="0" />
+      <joint name="UR2_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR2_shoulder_pan_joint" value="0" />
+      <joint name="UR2_wrist_1_joint" value="0" />
+      <joint name="UR2_wrist_2_joint" value="0" />
+      <joint name="UR2_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR2_up" group="UR2_manipulator">
+      <joint name="UR2_elbow_joint" value="0" />
+      <joint name="UR2_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR2_shoulder_pan_joint" value="0" />
+      <joint name="UR2_wrist_1_joint" value="-1.5707" />
+      <joint name="UR2_wrist_2_joint" value="0" />
+      <joint name="UR2_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR2_test_configuration" group="UR2_manipulator">
+      <joint name="UR2_elbow_joint" value="1.4" />
+      <joint name="UR2_shoulder_lift_joint" value="-1.62" />
+      <joint name="UR2_shoulder_pan_joint" value="1.54" />
+      <joint name="UR2_wrist_1_joint" value="-1.2" />
+      <joint name="UR2_wrist_2_joint" value="-1.6" />
+      <joint name="UR2_wrist_3_joint" value="-0.11" />
+    </group_state>
+
+    <group_state name="UR3_home" group="UR3_manipulator">
+      <joint name="UR3_elbow_joint" value="0" />
+      <joint name="UR3_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR3_shoulder_pan_joint" value="0" />
+      <joint name="UR3_wrist_1_joint" value="0" />
+      <joint name="UR3_wrist_2_joint" value="0" />
+      <joint name="UR3_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR3_up" group="UR3_manipulator">
+      <joint name="UR3_elbow_joint" value="0" />
+      <joint name="UR3_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR3_shoulder_pan_joint" value="0" />
+      <joint name="UR3_wrist_1_joint" value="-1.5707" />
+      <joint name="UR3_wrist_2_joint" value="0" />
+      <joint name="UR3_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR3_test_configuration" group="UR3_manipulator">
+      <joint name="UR3_elbow_joint" value="1.4" />
+      <joint name="UR3_shoulder_lift_joint" value="-1.62" />
+      <joint name="UR3_shoulder_pan_joint" value="1.54" />
+      <joint name="UR3_wrist_1_joint" value="-1.2" />
+      <joint name="UR3_wrist_2_joint" value="-1.6" />
+      <joint name="UR3_wrist_3_joint" value="-0.11" />
+    </group_state>
+
+    <group_state name="UR4_home" group="UR4_manipulator">
+      <joint name="UR4_elbow_joint" value="0" />
+      <joint name="UR4_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR4_shoulder_pan_joint" value="0" />
+      <joint name="UR4_wrist_1_joint" value="0" />
+      <joint name="UR4_wrist_2_joint" value="0" />
+      <joint name="UR4_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR4_up" group="UR4_manipulator">
+      <joint name="UR4_elbow_joint" value="0" />
+      <joint name="UR4_shoulder_lift_joint" value="-1.5707" />
+      <joint name="UR4_shoulder_pan_joint" value="0" />
+      <joint name="UR4_wrist_1_joint" value="-1.5707" />
+      <joint name="UR4_wrist_2_joint" value="0" />
+      <joint name="UR4_wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="UR4_test_configuration" group="UR4_manipulator">
+      <joint name="UR4_elbow_joint" value="1.4" />
+      <joint name="UR4_shoulder_lift_joint" value="-1.62" />
+      <joint name="UR4_shoulder_pan_joint" value="1.54" />
+      <joint name="UR4_wrist_1_joint" value="-1.2" />
+      <joint name="UR4_wrist_2_joint" value="-1.6" />
+      <joint name="UR4_wrist_3_joint" value="-0.11" />
+    </group_state>
+    <!--END EFFECTOR - Purpose - Represent information about an end effector.-->
+    <!--VIRTUAL JOINT - Purpose - this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <!--DISABLE COLLISIONS - By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="UR1_base_link_inertia" link2="UR1_shoulder_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_base_link_inertia" link2="UR1_upper_arm_link" reason="Never" />
+    <disable_collisions link1="UR1_forearm_link" link2="UR1_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_forearm_link" link2="UR1_wrist_1_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_shoulder_link" link2="UR1_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_wrist_1_link" link2="UR1_wrist_2_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_wrist_1_link" link2="UR1_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR1_wrist_2_link" link2="UR1_wrist_3_link" reason="Adjacent" />
+    <disable_collisions link1="UR1_wrist_3_link" link2="UR1_quick_change_robot_side" reason="Adjacent" />
+    <disable_collisions link1="UR1_quick_change_robot_side" link2="UR1_gripper" reason="Adjacent" />
+    <disable_collisions link1="UR1_wrist_3_link" link2="UR1_gripper" reason="Never" />
+    <disable_collisions link1="UR1_rear_pillars" link2="UR1_support_pillar" reason="Never" />
+    <disable_collisions link1="UR1_support_pillar" link2="UR1_base_link_inertia" reason="Never" />
+    <disable_collisions link1="UR1_gripper" link2="UR1_tool0" reason="Never" />
+    <disable_collisions link1="UR1_support_pillar" link2="UR1_base_link" reason="Never" />
+    <disable_collisions link1="UR1_base_link" link2="UR1_base_link_inertia" reason="Adjacent" />
+
+    <disable_collisions link1="UR2_base_link_inertia" link2="UR2_shoulder_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_base_link_inertia" link2="UR2_upper_arm_link" reason="Never" />
+    <disable_collisions link1="UR2_forearm_link" link2="UR2_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_forearm_link" link2="UR2_wrist_1_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_shoulder_link" link2="UR2_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_wrist_1_link" link2="UR2_wrist_2_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_wrist_1_link" link2="UR2_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR2_wrist_2_link" link2="UR2_wrist_3_link" reason="Adjacent" />
+    <disable_collisions link1="UR2_wrist_3_link" link2="UR2_quick_change_robot_side" reason="Adjacent" />
+    <disable_collisions link1="UR2_quick_change_robot_side" link2="UR2_gripper" reason="Adjacent" />
+    <disable_collisions link1="UR2_wrist_3_link" link2="UR2_gripper" reason="Never" />
+    <disable_collisions link1="UR2_rear_pillars" link2="UR2_support_pillar" reason="Never" />
+    <disable_collisions link1="UR2_support_pillar" link2="UR2_base_link_inertia" reason="Never" />
+    <disable_collisions link1="UR2_gripper" link2="UR2_tool0" reason="Never" />
+    <disable_collisions link1="UR2_support_pillar" link2="UR2_base_link" reason="Never" />
+    <disable_collisions link1="UR2_base_link" link2="UR2_base_link_inertia" reason="Adjacent" />
+
+    <disable_collisions link1="UR3_base_link_inertia" link2="UR3_shoulder_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_base_link_inertia" link2="UR3_upper_arm_link" reason="Never" />
+    <disable_collisions link1="UR3_forearm_link" link2="UR3_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_forearm_link" link2="UR3_wrist_1_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_shoulder_link" link2="UR3_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_wrist_1_link" link2="UR3_wrist_2_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_wrist_1_link" link2="UR3_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR3_wrist_2_link" link2="UR3_wrist_3_link" reason="Adjacent" />
+    <disable_collisions link1="UR3_wrist_3_link" link2="UR3_quick_change_robot_side" reason="Adjacent" />
+    <disable_collisions link1="UR3_quick_change_robot_side" link2="UR3_gripper" reason="Adjacent" />
+    <disable_collisions link1="UR3_wrist_3_link" link2="UR3_gripper" reason="Never" />
+    <disable_collisions link1="UR3_rear_pillars" link2="UR3_support_pillar" reason="Never" />
+    <disable_collisions link1="UR3_support_pillar" link2="UR3_base_link_inertia" reason="Never" />
+    <disable_collisions link1="UR3_gripper" link2="UR3_tool0" reason="Never" />
+    <disable_collisions link1="UR3_support_pillar" link2="UR3_base_link" reason="Never" />
+    <disable_collisions link1="UR3_base_link" link2="UR3_base_link_inertia" reason="Adjacent" />
+
+    <disable_collisions link1="UR4_base_link_inertia" link2="UR4_shoulder_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_base_link_inertia" link2="UR4_upper_arm_link" reason="Never" />
+    <disable_collisions link1="UR4_forearm_link" link2="UR4_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_forearm_link" link2="UR4_wrist_1_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_shoulder_link" link2="UR4_upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_wrist_1_link" link2="UR4_wrist_2_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_wrist_1_link" link2="UR4_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR4_wrist_2_link" link2="UR4_wrist_3_link" reason="Adjacent" />
+    <disable_collisions link1="UR4_wrist_3_link" link2="UR4_quick_change_robot_side" reason="Adjacent" />
+    <disable_collisions link1="UR4_quick_change_robot_side" link2="UR4_gripper" reason="Adjacent" />
+    <disable_collisions link1="UR4_wrist_3_link" link2="UR4_gripper" reason="Never" />
+    <disable_collisions link1="UR4_rear_pillars" link2="UR4_support_pillar" reason="Never" />
+    <disable_collisions link1="UR4_support_pillar" link2="UR4_base_link_inertia" reason="Never" />
+    <disable_collisions link1="UR4_gripper" link2="UR4_tool0" reason="Never" />
+    <disable_collisions link1="UR4_support_pillar" link2="UR4_base_link" reason="Never" />
+    <disable_collisions link1="UR4_base_link" link2="UR4_base_link_inertia" reason="Adjacent" />
+
+
+    <!--        UR - 1       -->
+    <disable_collisions link1="UR1_wrist_3_link" link2="UR2_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR1_wrist_2_link" link2="UR2_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR1_wrist_3_link" link2="UR3_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR1_wrist_2_link" link2="UR3_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR1_wrist_3_link" link2="UR4_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR1_wrist_2_link" link2="UR4_wrist_2_link" reason="Never" />
+
+
+
+
+    <!--        UR - 2       -->
+    <disable_collisions link1="UR2_wrist_3_link" link2="UR1_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR2_wrist_2_link" link2="UR1_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR2_wrist_3_link" link2="UR3_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR2_wrist_2_link" link2="UR3_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR2_wrist_3_link" link2="UR4_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR2_wrist_2_link" link2="UR4_wrist_2_link" reason="Never" />
+
+
+
+
+
+    <!--        UR - 3       -->
+    <disable_collisions link1="UR3_wrist_3_link" link2="UR1_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR3_wrist_2_link" link2="UR1_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR3_wrist_3_link" link2="UR2_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR3_wrist_2_link" link2="UR2_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR3_wrist_3_link" link2="UR4_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR3_wrist_2_link" link2="UR4_wrist_2_link" reason="Never" />
+
+
+
+
+
+    <!--        UR - 4       -->
+    <disable_collisions link1="UR4_wrist_3_link" link2="UR1_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR4_wrist_2_link" link2="UR1_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR4_wrist_3_link" link2="UR2_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR4_wrist_2_link" link2="UR2_wrist_2_link" reason="Never" />
+
+    <disable_collisions link1="UR4_wrist_3_link" link2="UR3_wrist_3_link" reason="Never" />
+    <disable_collisions link1="UR4_wrist_2_link" link2="UR3_wrist_2_link" reason="Never" />
+  
+
+</robot>

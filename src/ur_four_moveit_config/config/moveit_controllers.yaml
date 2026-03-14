@@ -1,0 +1,81 @@
+# MoveIt uses this configuration for controller management
+
+trajectory_execution:
+  allowed_execution_duration_scaling: 1.5      # originally 1.2
+  allowed_goal_duration_margin: 0.5
+  allowed_start_tolerance: 0.1                # originally 0.01
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    # - scaled_joint_trajectory_controller_ur1
+    # - scaled_joint_trajectory_controller_ur2
+    - joint_trajectory_controller_ur1
+    - joint_trajectory_controller_ur2
+    - joint_trajectory_controller_ur3
+    - joint_trajectory_controller_ur4
+
+  # scaled_joint_trajectory_controller_ur1:
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: false
+  #   joints:
+  #     - UR1_shoulder_pan_joint
+  #     - UR1_shoulder_lift_joint
+  #     - UR1_elbow_joint
+  #     - UR1_wrist_1_joint
+  #     - UR1_wrist_2_joint
+  #     - UR1_wrist_3_joint
+
+
+  joint_trajectory_controller_ur1:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - UR1_shoulder_pan_joint
+      - UR1_shoulder_lift_joint
+      - UR1_elbow_joint
+      - UR1_wrist_1_joint
+      - UR1_wrist_2_joint
+      - UR1_wrist_3_joint
+
+
+  joint_trajectory_controller_ur2:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - UR2_shoulder_pan_joint
+      - UR2_shoulder_lift_joint
+      - UR2_elbow_joint
+      - UR2_wrist_1_joint
+      - UR2_wrist_2_joint
+      - UR2_wrist_3_joint
+
+  
+  joint_trajectory_controller_ur3:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - UR3_shoulder_pan_joint
+      - UR3_shoulder_lift_joint
+      - UR3_elbow_joint
+      - UR3_wrist_1_joint
+      - UR3_wrist_2_joint
+      - UR3_wrist_3_joint
+
+  
+  joint_trajectory_controller_ur4:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - UR4_shoulder_pan_joint
+      - UR4_shoulder_lift_joint
+      - UR4_elbow_joint
+      - UR4_wrist_1_joint
+      - UR4_wrist_2_joint
+      - UR4_wrist_3_joint

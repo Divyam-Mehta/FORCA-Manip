@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<robot name="bad_onion" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <link name="base_link">
+    <collision>
+        <origin xyz="0 0 0.0" rpy="1.571 0 0"/>
+        <geometry>
+            <!-- <mesh filename="/home/divyam/four_ur_ws/install/ur_four/share/ur_four/meshes/custom_onion_bad.dae" scale="0.5 0.5 0.5"/> -->
+            <sphere radius="0.02"/>             <!--   Comment this one if you want accurate but complex geometry   -->>
+        </geometry>
+    </collision>
+    <visual>
+        <origin xyz="0 0 0.0" rpy="1.571 0 0"/>
+        <geometry>
+            <mesh filename="/home/divyam/four_ur_ws/install/ur_four/share/ur_four/meshes/custom_onion_bad.dae" scale="0.5 0.5 0.5"/>
+        </geometry>
+    </visual>
+    <inertial>
+        <origin xyz="0 0 0.0" rpy="1.571 0 0"/>
+        <mass value="0.14"/>
+        <inertia
+            ixx="0.000254" ixy="0.0" ixz="0.0"
+            iyy="0.000254" iyz="0.0"
+            izz="0.000254"/>
+    </inertial>
+    </link>
+    
+    <gazebo>
+        <plugin name="gz::sim::systems::OdometryPublisher" filename="gz-sim-odometry-publisher-system">
+            <odom_frame>world</odom_frame>
+            <odom_publish_frequency>1</odom_publish_frequency>
+            <dimensions>3</dimensions>
+        </plugin>
+    </gazebo>
+    
+</robot>

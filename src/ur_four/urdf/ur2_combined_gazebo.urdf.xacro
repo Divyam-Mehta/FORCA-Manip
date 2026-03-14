@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Prasanth Suresh (ps32611@uga.edu); Description: ur3e Robot combined with onrobot Gripper URDF -->
+<!-- Do not edit/replicate without permission -->
+<robot name="ur2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Divyam  Edit  Start -->
+
+  <!-- Dummy arguments -->
+
+  <xacro:arg name="prefix_2" default="UR2_"/>
+
+  <xacro:arg name="robot_location_2" default='1.25 0.0 0.35'/>
+  <xacro:arg name="robot_orientation_2" default='0 0 1.57'/>
+
+  <xacro:property name="robot_location_2" value="$(arg robot_location_2)"/>
+  <xacro:property name="robot_orientation_2" value="$(arg robot_orientation_2)"/>
+
+  <!-- Divyam  Edit  End -->
+
+  <xacro:include filename="$(find ur_four)/urdf/ur2.xacro"/>
+
+  <!--xacro:include filename="$(find ur3e_irl_project)/urdf/conveyor_g_path.urdf.xacro"/-->
+  <xacro:include filename="$(find ur_four)/onrobot_sg/models/onrobot_sg_b/sg_b2.urdf"/>
+
+  <!-- <link name="world" /> -->
+  
+  <link name="$(arg prefix_2)support_pillar">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.8 0.5 0.7"/>
+        </geometry>
+        <!-- <material name="4,4,4"/> -->
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.8 0.5 0.7"/>
+        </geometry>
+      </collision>
+  </link>
+  
+  <link name="$(arg prefix_2)rear_pillars">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.8 0.05 1"/>
+        </geometry>
+        <!-- <material name="4,4,4"/> -->
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.8 0.05 1"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <!--xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="world" publish_pointcloud="true">
+    <origin xyz="-0.25 -0.36 1.25" rpy="0 0.7 1.5" />
+  </xacro:sensor_d435-->
+  
+   <!-- <link name="vention_assembly">
+      <inertial>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <mass value="16.45"/>
+        <inertia ixx="15.78" ixy="6.8" ixz="-13.73" iyy="34.55" iyz="-2.76" izz="33.82"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+        <material name="5,5,5"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+      </collision>
+  </link> -->
+  
+  <!-- fix the ur robot in place -->
+  <joint name="world_to_$(arg prefix_2)pillar" type="fixed">
+    <origin xyz="${robot_location_2}" rpy="${robot_orientation_2}"/>
+    <parent link="world"/>
+    <child link="$(arg prefix_2)support_pillar"/>
+  </joint>
+
+  
+  <!-- <joint name="pillar_to_$(arg prefix_2)base" type="fixed">
+  <origin xyz="0 0.15 0.35" rpy="0 0 0"/>
+  <parent link="$(arg prefix_2)support_pillar"/>
+  <child link="$(arg prefix_2)base_link"/>
+  </joint> -->
+  
+  <joint name="pillar_to_$(arg prefix_2)rear_pillars" type="fixed">
+  <origin xyz="0 -0.25 0.7" rpy="0 0 0"/>
+  <parent link="$(arg prefix_2)support_pillar"/>
+  <child link="$(arg prefix_2)rear_pillars"/>
+</joint>
+  
+  <!-- <joint name="world_to_assembly" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="vention_assembly"/>
+  </joint> -->
+  <!-- <joint name="vention_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="vention_assembly"/>
+    <child link="base_link"/>
+  </joint>  -->
+
+  <joint name="$(arg prefix_2)to_gripper" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="$(arg prefix_2)tool0"/>
+    <child link="$(arg prefix_2)quick_change_robot_side"/>
+  </joint>
+
+  <!-- fix the conveyor belt in place >
+  <joint name="world_to_conveyor_base" type="fixed">
+    <origin xyz="0 1 1.26458" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="conveyor_base"/>
+  </joint-->
+
+  <!-- <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint> -->
+ 
+  <gazebo reference="$(arg prefix_2)support_pillar">
+      <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="$(arg prefix_2)rear_pillars">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- <gazebo reference="vention_assembly">
+      <selfCollide>true</selfCollide>
+  </gazebo> -->
+  <gazebo reference="$(arg prefix_2)quick_change_robot_side">
+      <selfCollide>true</selfCollide>
+  </gazebo>
+  
+  <disable_collisions link1="$(arg prefix_2)base_link" link2="$(arg prefix_2)support_pillar" reason="Adjacent" />
+  <!-- <disable_collisions link1="base_link" link2="vention_assembly" reason="Adjacent" /> -->
+  <disable_collisions link1="$(arg prefix_2)tool0" link2="$(arg prefix_2)quick_change_robot_side" reason="Adjacent" />
+  
+ 
+ 
+</robot>

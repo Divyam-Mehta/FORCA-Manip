@@ -1,0 +1,14 @@
+Images/img_010_026.jpg,297,120,387,318,turtlebot
+Images/img_010_028.jpg,287,118,392,318,turtlebot
+Images/img_011_003.jpg,278,122,376,319,turtlebot
+Images/img_011_009.jpg,276,118,374,318,turtlebot
+Images/img_011_013.jpg,272,116,372,320,turtlebot
+Images/img_011_020.jpg,276,123,378,317,turtlebot
+Images/img_011_023.jpg,277,118,372,319,turtlebot
+Images/img_011_027.jpg,278,119,379,317,turtlebot
+Images/img_041_033.jpg,132,196,168,259,turtlebot
+Images/img_041_034.jpg,135,197,168,256,turtlebot
+Images/img_041_035.jpg,138,197,169,257,turtlebot
+Images/img_711_487.jpg,171,93,286,326,turtlebot
+Images/img_813_001.jpg,391,108,469,323,turtlebot
+

@@ -1,0 +1,214 @@
+controller_manager:
+  ros__parameters:
+    # Update rate is intentionally lower than for real robot to support less powerful hardware
+    update_rate: 50  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    
+
+
+    joint_trajectory_controller_ur1:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+
+    joint_trajectory_controller_ur2:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+
+    joint_trajectory_controller_ur3:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+
+    joint_trajectory_controller_ur4:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+
+
+
+
+
+
+joint_trajectory_controller_ur1:
+  ros__parameters:
+    joints:
+      - UR1_shoulder_pan_joint
+      - UR1_shoulder_lift_joint
+      - UR1_elbow_joint
+      - UR1_wrist_1_joint
+      - UR1_wrist_2_joint
+      - UR1_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    # allow_nonzero_velocity_at_trajectory_end: True
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR1_shoulder_pan_joint: { trajectory: 5.0, goal: 0.1 }   # Original Trajectory: 0.20
+      UR1_shoulder_lift_joint: { trajectory: 5.0, goal: 0.1 }
+      UR1_elbow_joint: { trajectory: 5.0, goal: 0.1 }
+      UR1_wrist_1_joint: { trajectory: 5.0, goal: 0.1 }
+      UR1_wrist_2_joint: { trajectory: 5.0, goal: 0.1 }
+      UR1_wrist_3_joint: { trajectory: 5.0, goal: 0.1 }
+
+    initial_positions:
+      UR1_shoulder_pan_joint: -1.32645
+      UR1_shoulder_lift_joint: -1.13446
+      UR1_elbow_joint: -1.88496
+      UR1_wrist_1_joint: -1.69297
+      UR1_wrist_2_joint: -4.71239
+      UR1_wrist_3_joint: 1.81514
+
+
+
+
+
+
+
+joint_trajectory_controller_ur2:
+  ros__parameters:
+    joints:
+      - UR2_shoulder_pan_joint
+      - UR2_shoulder_lift_joint
+      - UR2_elbow_joint
+      - UR2_wrist_1_joint
+      - UR2_wrist_2_joint
+      - UR2_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    # allow_nonzero_velocity_at_trajectory_end: True
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR2_shoulder_pan_joint: { trajectory: 5.0, goal: 0.1 }
+      UR2_shoulder_lift_joint: { trajectory: 5.0, goal: 0.1 }
+      UR2_elbow_joint: { trajectory: 5.0, goal: 0.1 }
+      UR2_wrist_1_joint: { trajectory: 5.0, goal: 0.1 }
+      UR2_wrist_2_joint: { trajectory: 5.0, goal: 0.1 }
+      UR2_wrist_3_joint: { trajectory: 5.0, goal: 0.1 }
+    
+    # initial_positions:
+    #   UR2_shoulder_pan_joint: 1.25664
+    #   UR2_shoulder_lift_joint: -2.14675
+    #   UR2_elbow_joint: 1.93732
+    #   UR2_wrist_1_joint: 4.92183
+    #   UR2_wrist_2_joint: -1.5708
+    #   UR2_wrist_3_joint: -1.88496
+
+    initial_positions:
+      UR2_shoulder_pan_joint: -1.4924284179503047
+      UR2_shoulder_lift_joint: -1.0708117042883918
+      UR2_elbow_joint: -2.014945697534634
+      UR2_wrist_1_joint: 4.596521166273515
+      UR2_wrist_2_joint: -4.707813175200921
+      UR2_wrist_3_joint: 4.789886776339578
+
+
+
+
+
+
+
+
+joint_trajectory_controller_ur3:
+  ros__parameters:
+    joints:
+      - UR3_shoulder_pan_joint
+      - UR3_shoulder_lift_joint
+      - UR3_elbow_joint
+      - UR3_wrist_1_joint
+      - UR3_wrist_2_joint
+      - UR3_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    # allow_nonzero_velocity_at_trajectory_end: True
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR3_shoulder_pan_joint: { trajectory: 5.0, goal: 0.1 }
+      UR3_shoulder_lift_joint: { trajectory: 5.0, goal: 0.1 }
+      UR3_elbow_joint: { trajectory: 5.0, goal: 0.1 }
+      UR3_wrist_1_joint: { trajectory: 5.0, goal: 0.1 }
+      UR3_wrist_2_joint: { trajectory: 5.0, goal: 0.1 }
+      UR3_wrist_3_joint: { trajectory: 5.0, goal: 0.1 }
+    
+    initial_positions:
+      UR3_shoulder_pan_joint: -1.32645
+      UR3_shoulder_lift_joint: -1.13446
+      UR3_elbow_joint: -1.88496
+      UR3_wrist_1_joint: -1.69297
+      UR3_wrist_2_joint: -4.71239
+      UR3_wrist_3_joint: 1.81514
+
+
+
+
+
+
+
+
+joint_trajectory_controller_ur4:
+  ros__parameters:
+    joints:
+      - UR4_shoulder_pan_joint
+      - UR4_shoulder_lift_joint
+      - UR4_elbow_joint
+      - UR4_wrist_1_joint
+      - UR4_wrist_2_joint
+      - UR4_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    # allow_nonzero_velocity_at_trajectory_end: True
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      UR4_shoulder_pan_joint: { trajectory: 5.0, goal: 0.1 }
+      UR4_shoulder_lift_joint: { trajectory: 5.0, goal: 0.1 }
+      UR4_elbow_joint: { trajectory: 5.0, goal: 0.1 }
+      UR4_wrist_1_joint: { trajectory: 5.0, goal: 0.1 }
+      UR4_wrist_2_joint: { trajectory: 5.0, goal: 0.1 }
+      UR4_wrist_3_joint: { trajectory: 5.0, goal: 0.1 }
+    
+    # initial_positions:
+    #   UR4_shoulder_pan_joint: 1.25664
+    #   UR4_shoulder_lift_joint: -2.14675
+    #   UR4_elbow_joint: 1.93732
+    #   UR4_wrist_1_joint: 4.92183
+    #   UR4_wrist_2_joint: -1.5708
+    #   UR4_wrist_3_joint: -1.88496
+
+    initial_positions:
+      UR4_shoulder_pan_joint: -5.001399543837835
+      UR4_shoulder_lift_joint: -2.1818835561104315
+      UR4_elbow_joint: 1.9760449971995246
+      UR4_wrist_1_joint: -1.365699271211924
+      UR4_wrist_2_joint: 4.710647364752554
+      UR4_wrist_3_joint: -1.859260222908152

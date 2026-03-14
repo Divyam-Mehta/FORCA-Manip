@@ -1,0 +1,19 @@
+pip3 install absl-py argon2-cffi astor astunparse attrs backcall bleach cachetools cffi chardet cycler cython decorator defusedxml entrypoints flatbuffers gast google-auth google-auth-oauthlib google-pasta grpcio h5py idna importlib-metadata jsonschema jupyter jupyter-client jupyter-console jupyter-core jupyterlab-pygments jupyterlab-widgets keras keras-applications keras-preprocessing keras_retinanet kiwisolver markdown markupsafe matplotlib mistune nbconvert nbformat notebook numpy oauthlib opencv-python opt-einsum packaging pandocfilters parso pexpect pickleshare pillow progressbar prometheus-client prompt-toolkit protobuf ptyprocess pyasn1 pyasn1-modules pycocotools pycparser pygments pyparsing pyrsistent python-dateutil python-utils pyyaml pyzmq qtconsole qtpy requests requests-oauthlib rsa scipy send2trash six tensorboard tensorboard-plugin-wit tensorflow tensorflow-estimator tensorflow-gpu termcolor terminado testpath tornado wcwidth webencodings werkzeug widgetsnbextension wrapt zipp 
+
+
+
+
+# Unable to install
+
+async-generator
+nbclient
+nest-asyncio
+ipywidgets
+ipykernel
+ipython
+ipython-genutils
+jedi 
+jinja
+traitlets
+typing-extensions
+urllib

@@ -1,0 +1,1011 @@
+[INFO] [launch]: All log files can be found below /home/divyam/.ros/log/2025-09-24-09-23-53-491755-HHCSCI-733521-210857
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [static_transform_publisher-1]: process started with pid [210860]
+[INFO] [static_transform_publisher-2]: process started with pid [210861]
+[INFO] [parameter_bridge-3]: process started with pid [210862]
+[INFO] [gazebo-4]: process started with pid [210863]
+[INFO] [robot_state_publisher-5]: process started with pid [210864]
+[INFO] [create-6]: process started with pid [210865]
+[INFO] [create-7]: process started with pid [210866]
+[INFO] [create-8]: process started with pid [210868]
+[INFO] [create-9]: process started with pid [210869]
+[INFO] [create-10]: process started with pid [210870]
+[INFO] [create-11]: process started with pid [210871]
+[INFO] [create-12]: process started with pid [210872]
+[INFO] [create-13]: process started with pid [210873]
+[static_transform_publisher-1] [WARN] [1758720233.758987632] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [WARN] [1758720233.759081638] []: Old-style arguments are deprecated; see --help for new-style arguments
+[create-9] [INFO] [1758720233.772922346] [ros_gz_sim]: Requesting list of world names.
+[robot_state_publisher-5] [INFO] [1758720233.773929377] [robot_state_publisher]: Robot initialized
+[create-10] [INFO] [1758720233.774709662] [ros_gz_sim]: Requesting list of world names.
+[create-12] [INFO] [1758720233.775421770] [ros_gz_sim]: Requesting list of world names.
+[static_transform_publisher-1] [INFO] [1758720233.776234694] [static_tf_ur1]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.000000', '0.150000', '0.350000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'world' to 'UR1_base_link'
+[create-11] [INFO] [1758720233.776236789] [ros_gz_sim]: Requesting list of world names.
+[static_transform_publisher-2] [INFO] [1758720233.776549508] [static_tf_ur2]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('1.300000', '0.150000', '0.350000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'world' to 'UR2_base_link'
+[create-7] [INFO] [1758720233.777351785] [ros_gz_sim]: Requesting list of world names.
+[create-13] [INFO] [1758720233.777671311] [ros_gz_sim]: Requesting list of world names.
+[create-8] [INFO] [1758720233.778553608] [ros_gz_sim]: Requesting list of world names.
+[create-6] [INFO] [1758720233.784717531] [ros_gz_sim]: Requesting list of world names.
+[parameter_bridge-3] [INFO] [1758720233.798055769] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock]) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-3] [WARN] [1758720233.798197036] [ros_gz_bridge]: Failed to create a bridge for topic [/clock] with ROS2 type [rosgraph_msgs/msg/Clock] to topic [/clock] with Gazebo Transport type [gz.msgs.Clock]]: No template specialization for the pair
+[parameter_bridge-3] [INFO] [1758720233.798203639] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/my_world/create (gz.msgs.EntityFactory]) -> /world/my_world/create (ros_gz_interfaces/msg/EntityFactory)] (Lazy 0)
+[parameter_bridge-3] [WARN] [1758720233.798212836] [ros_gz_bridge]: Failed to create a bridge for topic [/world/my_world/create] with ROS2 type [ros_gz_interfaces/msg/EntityFactory] to topic [/world/my_world/create] with Gazebo Transport type [gz.msgs.EntityFactory]]: No template specialization for the pair
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:413:17: QML ToolButton: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:413:17: QML ToolButton: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [Dbg] [gz.cc:166] Subscribing to [/gazebo/starting_world].
+[gazebo-4] [Dbg] [gz.cc:168] Waiting for a world to be set from the GUI...
+[gazebo-4] [Msg] Received world [/home/divyam/four_ur_ws/src/ur_four/worlds/test.sdf] from the GUI.
+[gazebo-4] [Dbg] [gz.cc:172] Unsubscribing from [/gazebo/starting_world].
+[gazebo-4] [Msg] Gazebo Sim Server v8.9.0
+[gazebo-4] [Msg] Loading SDF world file[/home/divyam/four_ur_ws/src/ur_four/worlds/test.sdf].
+[gazebo-4] [Msg] Serving entity system service on [/entity/system/add]
+[gazebo-4] [Dbg] [Physics.cc:899] Loaded [gz::physics::dartsim::Plugin] from library [/home/divyam/gz-harmonic-ws/install/lib/gz-physics-7/engine-plugins/libgz-physics-dartsim-plugin.so]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::Physics] for entity [1]
+[gazebo-4] [Msg] Create service on [/world/empty/create]
+[gazebo-4] [Msg] Remove service on [/world/empty/remove]
+[gazebo-4] [Msg] Pose service on [/world/empty/set_pose]
+[gazebo-4] [Msg] Pose service on [/world/empty/set_pose_vector]
+[gazebo-4] [Msg] Light configuration service on [/world/empty/light_config]
+[gazebo-4] [Msg] Physics service on [/world/empty/set_physics]
+[gazebo-4] [Msg] SphericalCoordinates service on [/world/empty/set_spherical_coordinates]
+[gazebo-4] [Msg] Enable collision service on [/world/empty/enable_collision]
+[gazebo-4] [Msg] Disable collision service on [/world/empty/disable_collision]
+[gazebo-4] [Msg] Material service on [/world/empty/visual_config]
+[gazebo-4] [Msg] Material service on [/world/empty/wheel_slip]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::UserCommands] for entity [1]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::SceneBroadcaster] for entity [1]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::Contact] for entity [1]
+[gazebo-4] [Msg] Loaded level [default]
+[gazebo-4] [Msg] Serving world controls on [/world/empty/control], [/world/empty/control/state] and [/world/empty/playback/control]
+[gazebo-4] [Msg] Serving GUI information on [/world/empty/gui/info]
+[gazebo-4] [Msg] World [empty] initialized with [1ms] physics profile.
+[gazebo-4] [Msg] Serving world SDF generation service on [/world/empty/generate_world_sdf]
+[gazebo-4] [Msg] Serving world names on [/gazebo/worlds]
+[gazebo-4] [Msg] Resource path add service on [/gazebo/resource_paths/add].
+[gazebo-4] [Msg] Resource path get service on [/gazebo/resource_paths/get].
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:413:17: QML ToolButton: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[create-6] [INFO] [1758720234.669959112] [ros_gz_sim]: Waiting messages on topic [robot_description].
+[create-11] [INFO] [1758720235.068983387] [ros_gz_sim]: Entity creation successful.
+[create-8] [INFO] [1758720235.068983259] [ros_gz_sim]: Entity creation successful.
+[create-7] [INFO] [1758720235.069036391] [ros_gz_sim]: Entity creation successful.
+[create-13] [INFO] [1758720235.069135493] [ros_gz_sim]: Entity creation successful.
+[create-6] [INFO] [1758720235.069166676] [ros_gz_sim]: Entity creation successful.
+[create-10] [INFO] [1758720235.069258809] [ros_gz_sim]: Entity creation successful.
+[create-9] [INFO] [1758720235.069334628] [ros_gz_sim]: Entity creation successful.
+[create-12] [INFO] [1758720235.069825416] [ros_gz_sim]: Entity creation successful.
+[INFO] [create-7]: process has finished cleanly [pid 210866]
+[INFO] [create-12]: process has finished cleanly [pid 210872]
+[INFO] [create-13]: process has finished cleanly [pid 210873]
+[INFO] [create-10]: process has finished cleanly [pid 210870]
+[INFO] [create-8]: process has finished cleanly [pid 210868]
+[INFO] [create-6]: process has finished cleanly [pid 210865]
+[INFO] [create-9]: process has finished cleanly [pid 210869]
+[INFO] [create-11]: process has finished cleanly [pid 210871]
+[INFO] [spawner-14]: process started with pid [211130]
+[gazebo-4] [Msg] Resource path resolve service on [/gaze[Msg] Gazebo Sim GUI    v8.9.0
+[gazebo-4] [Dbg] [Gui.cc:275] Waiting for subscribers to [/gazebo/starting_world]...
+[gazebo-4] [Dbg] [Application.cc:96] Initializing application.
+[gazebo-4] [Dbg] [Application.cc:170] Qt using OpenGL graphics interface
+[gazebo-4] [GUI] [Dbg] [Application.cc:657] Create main window
+[gazebo-4] [GUI] [Dbg] [PathManager.cc:68] Requesting resource paths through [/gazebo/resource_paths/get]
+[gazebo-4] [GUI] [Dbg] [Gui.cc:355] GUI requesting list of world names. The server may be busy downloading resources. Please be patient.
+[gazebo-4] [GUI] [Dbg] [PathManager.cc:57] Received resource paths.
+[gazebo-4] [GUI] [Dbg] [Gui.cc:413] Requesting GUI from [/world/empty/gui/info]...
+[gazebo-4] [GUI] [Dbg] [GuiRunner.cc:149] Requesting initial state from [/world/empty/state]...
+[gazebo-4] [GUI] [Msg] Loading config [/home/divyam/.gz/sim/8/gui.config]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [MinimalScene]
+[gazebo-4] [GUI] [Dbg] [MinimalScene.cc:802] Creating gz-rendering interface for OpenGL
+[gazebo-4] [GUI] [Dbg] [MinimalScene.cc:802] Creating gz-rendering interface for OpenGL
+[gazebo-4] [GUI] [Dbg] [MinimalScene.cc:986] Creating render thread interface for OpenGL
+[gazebo-4] [GUI] [Dbg] [MinimalScene.cc:802] Creating gz-rendering interface for OpenGL
+[gazebo-4] [GUI] [Dbg] [MinimalScene.cc:986] Creating render thread interface for OpenGL
+[gazebo-4] [GUI] [Msg] Added plugin [3D View] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [MinimalScene] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libMinimalScene.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [EntityContextMenuPlugin]
+[gazebo-4] [GUI] [Msg] Currently tracking topic on [/gui/currently_tracked]
+[gazebo-4] [GUI] [Msg] Added plugin [Entity Context Menu] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [EntityContextMenuPlugin] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libEntityContextMenuPlugin.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [GzSceneManager]
+[gazebo-4] [GUI] [Msg] Added plugin [Scene Manager] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [GzSceneManager] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libGzSceneManager.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [InteractiveViewControl]
+[gazebo-4] [GUI] [Msg] Camera view controller topic advertised on [/gui/camera/view_control]
+[gazebo-4] [GUI] [Msg] Camera reference visual topic advertised on [/gui/camera/view_control/reference_visual]
+[gazebo-4] [GUI] [Msg] Camera view control sensitivity advertised on [/gui/camera/view_control/sensitivity]
+[gazebo-4] [GUI] [Msg] Added plugin [Interactive view control] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [InteractiveViewControl] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libInteractiveViewControl.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [CameraTracking]
+[gazebo-4] [GUI] [Msg] Added plugin [Camera tracking] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [CameraTracking] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libCameraTracking.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [MarkerManager]
+[gazebo-4] [GUI] [Msg] Listening to stats on [/world/empty/stats]
+[gazebo-4] [GUI] [Msg] Added plugin [Marker Manager] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [MarkerManager] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libMarkerManager.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [SelectEntities]
+[gazebo-4] [GUI] [Msg] Added plugin [Select entities] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [SelectEntities] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libSelectEntities.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [Spawn]
+[gazebo-4] [GUI] [Msg] Added plugin [Spawn] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [Spawn] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libSpawn.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [VisualizationCapabilities]
+[gazebo-4] [GUI] [Msg] View as transparent service on [/gui/view/transparent]
+[gazebo-4] [GUI] [Msg] View as wireframes service on [/gui/view/wireframes]
+[gazebo-4] [GUI] [Msg] View center of mass service on [/gui/view/com]
+[gazebo-4] [GUI] [Msg] View inertia service on [/gui/view/inertia]
+[gazebo-4] [GUI] [Msg] View collisions service on [/gui/view/collisions]
+[gazebo-4] [GUI] [Msg] View joints service on [/gui/view/joints]
+[gazebo-4] [GUI] [Msg] View frames service on [/gui/view/frames]
+[gazebo-4] [GUI] [Msg] Added plugin [Visualization capabilities] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [VisualizationCapabilities] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libVisualizationCapabilities.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [WorldControl]
+[gazebo-4] [GUI] [Msg] Using world control service [/world/empty/control]
+[gazebo-4] [GUI] [Msg] Listening to stats on [/world/empty/stats]
+[gazebo-4] [GUI] [Dbg] [WorldControl.cc:237] Using an event to share WorldControl msgs with the server
+[spawner-14] [INFO] [1758720235.412599409] [spawner_joint_state_broadcaster]: waiting for service /controller_manager/list_controllers to become available...
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:413:17: QML ToolButton: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file::/ComponentInspector/ComponentInspector.qml:251:3: QML Dialog: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:413:17: QML ToolButton: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Dialogs/DefaultFileDialog.qml:309:21: QML Button: Binding loop detected for property "implicitHeight"
+[gazebo-4] [GUI] [Msg] Added plugin [World control] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [WorldControl] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libWorldControl.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [WorldStats]
+[gazebo-4] [GUI] [Msg] Listening to stats on [/world/empty/stats]
+[gazebo-4] [GUI] [Msg] Added plugin [World stats] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [WorldStats] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libWorldStats.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [Shapes]
+[gazebo-4] [GUI] [Msg] Added plugin [Shapes] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [Shapes] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libShapes.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [Lights]
+[gazebo-4] [GUI] [Msg] Added plugin [Lights] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [Lights] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libLights.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [TransformControl]
+[gazebo-4] [GUI] [Msg] Added plugin [Transform control] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [TransformControl] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libTransformControl.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [Screenshot]
+[gazebo-4] [GUI] [Msg] Screenshot service on [/gui/screenshot]
+[gazebo-4] [GUI] [Msg] Added plugin [Screenshot] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [Screenshot] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-gui-8/plugins/libScreenshot.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [CopyPaste]
+[gazebo-4] [GUI] [Msg] Added plugin [Copy/Paste] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [CopyPaste] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libCopyPaste.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [ComponentInspector]
+[gazebo-4] [GUI] [Msg] Added plugin [Component inspector] to main window
+[gazebo-4] [GUI] [Msg] Loaded plugin [ComponentInspector] from path [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/gui/libComponentInspector.so]
+[gazebo-4] [GUI] [Dbg] [Application.cc:528] Loading plugin [EntityTree]
+[gazebo-4] [GUI] [Msg] Currently tracking topic on [/gui/currently_tracked]
+[gazebo-4] [GUI] [Wrn] [Application.cc:908] [QT] file::/WorldStats/WorldStats.qml:53:3: QML RowLayout: Binding loop detected for property "x"
+[gazebo-4] libEGL warning: egl: failed to create dri2 screen
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:933] Gazebo does not support Ogre material scripts. See https://gazebosim.org/api/sim/8/migrationsdf.html#:~:text=Materials for details.
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:949] Using an internal gazebo.material to parse Gazebo/Green
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:933] Gazebo does not support Ogre material scripts. See https://gazebosim.org/api/sim/8/migrationsdf.html#:~:text=Materials for details.
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:949] Using an internal gazebo.material to parse Gazebo/Green
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:933] Gazebo does not support Ogre material scripts. See https://gazebosim.org/api/sim/8/migrationsdf.html#:~:text=Materials for details.
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:949] Using an internal gazebo.material to parse Gazebo/Grey
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:933] Gazebo does not support Ogre material scripts. See https://gazebosim.org/api/sim/8/migrationsdf.html#:~:text=Materials for details.
+[gazebo-4] [Wrn] [SdfEntityCreator.cc:949] Using an internal gazebo.material to parse Gazebo/FlatBlack
+[gazebo-4] [INFO] [1758720236.064102061] [gz_ros_control]: [gz_ros2_control] Fixed joint [world_to_UR1_pillar] (Entity=167)] is skipped
+[gazebo-4] [INFO] [1758720236.064217123] [gz_ros_control]: [gz_ros2_control] Fixed joint [world_to_UR2_pillar] (Entity=174)] is skipped
+[gazebo-4] [INFO] [1758720236.064225406] [gz_ros_control]: [gz_ros2_control] Fixed joint [world_to_UR3_pillar] (Entity=181)] is skipped
+[gazebo-4] [INFO] [1758720236.064230948] [gz_ros_control]: [gz_ros2_control] Fixed joint [world_to_UR4_pillar] (Entity=188)] is skipped
+[gazebo-4] [INFO] [1758720236.065083606] [gz_ros_control]: Loading controller_manager
+[gazebo-4] [INFO] [1758720236.071467516] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[gazebo-4] [WARN] [1758720236.071564321] [gz_ros_control]: Waiting RM to load and initialize hardware...
+[gazebo-4] [INFO] [1758720236.081898509] [controller_manager]: Received robot description from topic.
+[gazebo-4] [INFO] [1758720236.087842253] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-4] [INFO] [1758720236.087937955] [gz_ros_control]: Loading joint: UR2_shoulder_pan_joint
+[gazebo-4] [INFO] [1758720236.087947040] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.087952165] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088004603] [gz_ros_control]: 			 found initial value: 1.256640
+[gazebo-4] [INFO] [1758720236.088010211] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088020638] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088022903] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088027818] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088029779] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088031564] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088093928] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088127299] [gz_ros_control]: Loading joint: UR2_shoulder_lift_joint
+[gazebo-4] [INFO] [1758720236.088129515] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088131176] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088133760] [gz_ros_control]: 			 found initial value: -2.146750
+[gazebo-4] [INFO] [1758720236.088135848] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088138129] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088139967] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088141890] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088143632] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088146263] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088150139] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088155714] [gz_ros_control]: Loading joint: UR2_elbow_joint
+[gazebo-4] [INFO] [1758720236.088157469] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088159046] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088161047] [gz_ros_control]: 			 found initial value: 1.937320
+[gazebo-4] [INFO] [1758720236.088162945] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088164802] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088166542] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088168933] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088170635] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088172211] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088180974] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088188477] [gz_ros_control]: Loading joint: UR2_wrist_1_joint
+[gazebo-4] [INFO] [1758720236.088191225] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088193491] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088196249] [gz_ros_control]: 			 found initial value: 4.921830
+[gazebo-4] [INFO] [1758720236.088199099] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088202042] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088204753] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088207452] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088210255] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088213747] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088218304] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088225357] [gz_ros_control]: Loading joint: UR2_wrist_2_joint
+[gazebo-4] [INFO] [1758720236.088227920] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088230348] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088249760] [gz_ros_control]: 			 found initial value: -1.570800
+[gazebo-4] [INFO] [1758720236.088252595] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088255415] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088258170] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088260861] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088263739] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088266050] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088271473] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088278882] [gz_ros_control]: Loading joint: UR2_wrist_3_joint
+[gazebo-4] [INFO] [1758720236.088281477] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088283739] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088286885] [gz_ros_control]: 			 found initial value: -1.884960
+[gazebo-4] [INFO] [1758720236.088289692] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088293622] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088296320] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088299295] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088301989] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088305069] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088309691] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088317033] [gz_ros_control]: Loading joint: UR1_shoulder_pan_joint
+[gazebo-4] [INFO] [1758720236.088319465] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088321760] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088324494] [gz_ros_control]: 			 found initial value: -1.326450
+[gazebo-4] [INFO] [1758720236.088327262] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088329929] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088332819] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088335836] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088338516] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088340697] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088345214] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088351614] [gz_ros_control]: Loading joint: UR1_shoulder_lift_joint
+[gazebo-4] [INFO] [1758720236.088354301] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088356053] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088357958] [gz_ros_control]: 			 found initial value: -1.134460
+[gazebo-4] [INFO] [1758720236.088359776] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088361531] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088363203] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088364910] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088366584] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088368791] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088371912] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088376629] [gz_ros_control]: Loading joint: UR1_elbow_joint
+[gazebo-4] [INFO] [1758720236.088378321] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088379880] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088381743] [gz_ros_control]: 			 found initial value: -1.884960
+[gazebo-4] [INFO] [1758720236.088383496] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088385195] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088387281] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088390409] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088392203] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088394177] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088398196] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088403076] [gz_ros_control]: Loading joint: UR1_wrist_1_joint
+[gazebo-4] [INFO] [1758720236.088404722] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088406209] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088409263] [gz_ros_control]: 			 found initial value: -1.692970
+[gazebo-4] [INFO] [1758720236.088410986] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088412787] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088414550] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088416291] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088422075] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088423513] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088426624] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088431445] [gz_ros_control]: Loading joint: UR1_wrist_2_joint
+[gazebo-4] [INFO] [1758720236.088433059] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088434504] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088436413] [gz_ros_control]: 			 found initial value: -4.712390
+[gazebo-4] [INFO] [1758720236.088438134] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088439875] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088442664] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088445734] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088447437] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088448839] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088451854] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088456583] [gz_ros_control]: Loading joint: UR1_wrist_3_joint
+[gazebo-4] [INFO] [1758720236.088458216] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088459724] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088461604] [gz_ros_control]: 			 found initial value: 1.815140
+[gazebo-4] [INFO] [1758720236.088463383] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088465098] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088466785] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088468495] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088471153] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088472540] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088475342] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088481015] [gz_ros_control]: Loading joint: UR3_shoulder_pan_joint
+[gazebo-4] [INFO] [1758720236.088482674] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088484133] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088485962] [gz_ros_control]: 			 found initial value: -1.326450
+[gazebo-4] [INFO] [1758720236.088487694] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088489438] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088491111] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088494024] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088495662] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088497074] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088499943] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088505064] [gz_ros_control]: Loading joint: UR3_shoulder_lift_joint
+[gazebo-4] [INFO] [1758720236.088506704] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088508251] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088510043] [gz_ros_control]: 			 found initial value: -1.134460
+[gazebo-4] [INFO] [1758720236.088516101] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088517808] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088519469] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088521182] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088523791] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088525203] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088528492] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088533584] [gz_ros_control]: Loading joint: UR3_elbow_joint
+[gazebo-4] [INFO] [1758720236.088535311] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088536847] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088538721] [gz_ros_control]: 			 found initial value: -1.884960
+[gazebo-4] [INFO] [1758720236.088540475] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088542179] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088543828] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088545512] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088547147] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088548512] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088552965] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088558259] [gz_ros_control]: Loading joint: UR3_wrist_1_joint
+[gazebo-4] [INFO] [1758720236.088559915] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088561490] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088566204] [gz_ros_control]: 			 found initial value: -1.692970
+[gazebo-4] [INFO] [1758720236.088567988] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088569781] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088571458] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088573226] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088575679] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088577130] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088579979] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088584742] [gz_ros_control]: Loading joint: UR3_wrist_2_joint
+[gazebo-4] [INFO] [1758720236.088586430] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088587895] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088589723] [gz_ros_control]: 			 found initial value: -4.712390
+[gazebo-4] [INFO] [1758720236.088591459] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088593184] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088594837] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088596513] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088598215] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088599633] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088604004] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088608851] [gz_ros_control]: Loading joint: UR3_wrist_3_joint
+[gazebo-4] [INFO] [1758720236.088610490] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088611969] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088613817] [gz_ros_control]: 			 found initial value: 1.815140
+[gazebo-4] [INFO] [1758720236.088616780] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088618509] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088620222] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088622726] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088624480] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088626011] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088628912] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088634174] [gz_ros_control]: Loading joint: UR4_shoulder_pan_joint
+[gazebo-4] [INFO] [1758720236.088635873] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088637384] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088639182] [gz_ros_control]: 			 found initial value: 1.256640
+[gazebo-4] [INFO] [1758720236.088640959] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088642695] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088644370] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088646069] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088647760] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088649237] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088652006] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088656943] [gz_ros_control]: Loading joint: UR4_shoulder_lift_joint
+[gazebo-4] [INFO] [1758720236.088658584] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088660114] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088661976] [gz_ros_control]: 			 found initial value: -2.146750
+[gazebo-4] [INFO] [1758720236.088663709] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088665497] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088667217] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088668933] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088670572] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088671967] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088674775] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088679581] [gz_ros_control]: Loading joint: UR4_elbow_joint
+[gazebo-4] [INFO] [1758720236.088682495] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088684032] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088685900] [gz_ros_control]: 			 found initial value: 1.937320
+[gazebo-4] [INFO] [1758720236.088687620] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088689343] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088691014] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088692703] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088694340] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088696920] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088699698] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088705101] [gz_ros_control]: Loading joint: UR4_wrist_1_joint
+[gazebo-4] [INFO] [1758720236.088706716] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088708194] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088710011] [gz_ros_control]: 			 found initial value: 4.921830
+[gazebo-4] [INFO] [1758720236.088711706] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088716029] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088717911] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088719737] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088721393] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088722886] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088725727] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088730261] [gz_ros_control]: Loading joint: UR4_wrist_2_joint
+[gazebo-4] [INFO] [1758720236.088731890] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088733402] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088735237] [gz_ros_control]: 			 found initial value: -1.570800
+[gazebo-4] [INFO] [1758720236.088737004] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088738730] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088740808] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088742642] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088744345] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088745858] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088748784] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088753395] [gz_ros_control]: Loading joint: UR4_wrist_3_joint
+[gazebo-4] [INFO] [1758720236.088756304] [gz_ros_control]: 	State:
+[gazebo-4] [INFO] [1758720236.088757811] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088759722] [gz_ros_control]: 			 found initial value: -1.884960
+[gazebo-4] [INFO] [1758720236.088761438] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088763185] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088764877] [gz_ros_control]: 		 effort
+[gazebo-4] [INFO] [1758720236.088766690] [gz_ros_control]: 			 found initial value: 0.000000
+[gazebo-4] [INFO] [1758720236.088768506] [gz_ros_control]: 	Command:
+[gazebo-4] [INFO] [1758720236.088769943] [gz_ros_control]: 		 position
+[gazebo-4] [INFO] [1758720236.088772769] [gz_ros_control]: 		 velocity
+[gazebo-4] [INFO] [1758720236.088977971] [gz_ros_control.resource_manager]: Initialize hardware 'GazeboSystem' 
+[gazebo-4] [INFO] [1758720236.089455127] [gz_ros_control.resource_manager]: Successful initialization of hardware 'GazeboSystem'
+[gazebo-4] [WARN] [1758720236.089499630] [gz_ros_control.resource_manager]: Importing state interfaces for the hardware 'GazeboSystem' returned no state interfaces.
+[gazebo-4] [INFO] [1758720236.089686174] [resource_manager]: 'configure' hardware 'GazeboSystem' 
+[gazebo-4] [INFO] [1758720236.089689571] [gz_ros_control]: System Successfully configured!
+[gazebo-4] [INFO] [1758720236.089696229] [resource_manager]: Successful 'configure' of hardware 'GazeboSystem'
+[gazebo-4] [INFO] [1758720236.089707860] [resource_manager]: 'activate' hardware 'GazeboSystem' 
+[gazebo-4] [INFO] [1758720236.089709329] [resource_manager]: Successful 'activate' of hardware 'GazeboSystem'
+[gazebo-4] [INFO] [1758720236.089716320] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[gazebo-4] [INFO] [1758720236.165355373] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[gazebo-4] [INFO] [1758720236.165438298] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[gazebo-4] [INFO] [1758720236.173816842] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[spawner-14] [INFO] [1758720236.189162918] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[gazebo-4] [INFO] [1758720236.190308718] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+[gazebo-4] [INFO] [1758720236.190531014] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[gazebo-4] [INFO] [1758720236.201054921] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[gazebo-4] [Err] [SystemLoader.cc:164] Failed to load system plugin: (Reason: library does not contain requested plugin)
+[gazebo-4] - Requested plugin name: [UR1_virtual_joint]
+[gazebo-4] - Requested library name: [libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Resolved library path: [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Detected Plugins:
+[gazebo-4]   - gz::sim::v8::systems::DynamicDetachableJoint
+[gazebo-4] 
+[gazebo-4]     aliases:
+[gazebo-4]       gz::sim::systems::DynamicDetachableJoint
+[gazebo-4] [Err] [SystemLoader.cc:164] Failed to load system plugin: (Reason: library does not contain requested plugin)
+[gazebo-4] - Requested plugin name: [UR2_virtual_joint]
+[gazebo-4] - Requested library name: [libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Resolved library path: [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Detected Plugins:
+[gazebo-4]   - gz::sim::v8::systems::DynamicDetachableJoint
+[gazebo-4] 
+[gazebo-4]     aliases:
+[gazebo-4]       gz::sim::systems::DynamicDetachableJoint
+[gazebo-4] [Err] [SystemLoader.cc:164] Failed to load system plugin: (Reason: library does not contain requested plugin)
+[gazebo-4] - Requested plugin name: [UR3_virtual_joint]
+[gazebo-4] - Requested library name: [libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Resolved library path: [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Detected Plugins:
+[gazebo-4]   - gz::sim::v8::systems::DynamicDetachableJoint
+[gazebo-4] 
+[gazebo-4]     aliases:
+[gazebo-4]       gz::sim::systems::DynamicDetachableJoint
+[gazebo-4] [Err] [SystemLoader.cc:164] Failed to load system plugin: (Reason: library does not contain requested plugin)
+[gazebo-4] - Requested plugin name: [UR4_virtual_joint]
+[gazebo-4] - Requested library name: [libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Resolved library path: [/home/divyam/gz-harmonic-ws/install/lib/gz-sim-8/plugins/libgz-sim-dynamic_detachable_joint-system.so]
+[gazebo-4] - Detected Plugins:
+[gazebo-4]   - gz::sim::v8::systems::DynamicDetachableJoint
+[gazebo-4] 
+[gazebo-4]     aliases:
+[gazebo-4]       gz::sim::systems::DynamicDetachableJoint
+[gazebo-4] [GUI] [Msg] Added plugin [Entity tree] to main windowo/resource_paths/resolve].
+[gazebo-4] [Msg] Resource paths published on [/gazebo/resource_paths].
+[gazebo-4] [Msg] Server control service on [/server_control].
+[gazebo-4] [Msg] Found no publishers on /stats, adding root stats topic
+[gazebo-4] [Msg] Found no publishers on /clock, adding root clock topic
+[gazebo-4] [Dbg] [SimulationRunner.cc:533] Creating PostUpdate worker threads: 3
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (0)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (1)
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [10] named [Camera_3]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [17] named [Bin_2]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [22] named [Bin_1]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [27] named [Conveyor]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz_ros2_control::GazeboSimROS2ControlPlugin] for entity [34]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [34] named [UR_Robots]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [195] named [Camera_1]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [202] named [Camera_2]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [209] named [Camera_4]
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [stand_link_fixed_joint_lump__camera_link_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [onion_bin2_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [onion_bin1_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [frame_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [frame_fixed_joint_lump__belt_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_support_pillar_fixed_joint_lump__UR1_base_link_inertia_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_shoulder_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_upper_arm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_forearm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_wrist_1_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_wrist_2_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR1_wrist_3_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_support_pillar_fixed_joint_lump__UR2_base_link_inertia_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_shoulder_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_upper_arm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_forearm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_wrist_1_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_wrist_2_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR2_wrist_3_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_support_pillar_fixed_joint_lump__UR3_base_link_inertia_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_shoulder_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_upper_arm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_forearm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_wrist_1_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_wrist_2_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR3_wrist_3_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_support_pillar_fixed_joint_lump__UR4_base_link_inertia_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_shoulder_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_upper_arm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_forearm_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_wrist_1_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_wrist_2_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [UR4_wrist_3_link_collision] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [stand_link_fixed_joint_lump__camera_link_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [stand_link_fixed_joint_lump__camera_link_collision_1] couldn't be created
+[gazebo-4] [Dbg] [SDFFeatures.cc:332] Mesh construction from an SDF has not been implemented yet for dartsim. Use AttachMeshShapeFeature to use mesh shapes.
+[gazebo-4] [Dbg] [SDFFeatures.cc:864] The geometry element of collision [stand_link_fixed_joint_lump__camera_link_collision_1] couldn't be created
+[gazebo-4] [Msg] Serving scene information on [/world/empty/scene/info]
+[gazebo-4] [Msg] Serving graph information on [/world/empty/scene/graph]
+[gazebo-4] [Msg] Serving full state on [/world/empty/state]
+[gazebo-4] [Msg] Serving full state (async) on [/world/empty/state_async]
+[gazebo-4] [Msg] Publishing scene information on [/world/empty/scene/info]
+[gazebo-4] [Msg] Publishing entity deletions on [/world/empty/scene/deletion]
+[gazebo-4] [Msg] Publishing state changes on [/world/empty/state]
+[gazebo-4] [Msg] Publishing pose messages on [/world/empty/pose/info]
+[gazebo-4] [Msg] Publishing dynamic pose messages on [/world/empty/dynamic_pose/info]
+[gazebo-4] [Dbg] [EntityComponentManager.cc:1656] Updated state thread iterators: 24 threads processing around 9 entities each.
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread (0)
+[gazebo-4] [WARN] [1758720238.611743189] [gz_ros_control]:  Desired controller update period (0.02 s) is slower than the gazebo simulation period (0.001 s).
+[spawner-14] [INFO] [1758720238.652052303] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[INFO] [spawner-14]: process has finished cleanly [pid 211130]
+[INFO] [spawner-15]: process started with pid [211323]
+[spawner-15] [INFO] [1758720239.301364102] [spawner_joint_trajectory_controller_ur1]: Setting controller param "params_file" to "/home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml" for joint_trajectory_controller_ur1
+[gazebo-4] [INFO] [1758720239.311297938] [controller_manager]: Loading controller : 'joint_trajectory_controller_ur1' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-4] [INFO] [1758720239.311323887] [controller_manager]: Loading controller 'joint_trajectory_controller_ur1'
+[gazebo-4] [INFO] [1758720239.314722097] [controller_manager]: Controller 'joint_trajectory_controller_ur1' node arguments: --ros-args --params-file /home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml -p use_sim_time:=true --params-file /home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml --param use_sim_time:=true 
+[spawner-15] [INFO] [1758720239.335102709] [spawner_joint_trajectory_controller_ur1]: Loaded joint_trajectory_controller_ur1
+[gazebo-4] [INFO] [1758720239.335525921] [controller_manager]: Configuring controller: 'joint_trajectory_controller_ur1'
+[gazebo-4] [INFO] [1758720239.335613971] [joint_trajectory_controller_ur1]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-4] [INFO] [1758720239.335625939] [joint_trajectory_controller_ur1]: Command interfaces are [position] and state interfaces are [position velocity].
+[gazebo-4] [INFO] [1758720239.335640384] [joint_trajectory_controller_ur1]: Using 'splines' interpolation method.
+[gazebo-4] [INFO] [1758720239.336845084] [joint_trajectory_controller_ur1]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-4] [INFO] [1758720239.355352286] [controller_manager]: Activating controllers: [ joint_trajectory_controller_ur1 ]
+[spawner-15] [INFO] [1758720239.395248487] [spawner_joint_trajectory_controller_ur1]: Configured and activated joint_trajectory_controller_ur1
+[INFO] [spawner-15]: process has finished cleanly [pid 211323]
+[INFO] [spawner-16]: process started with pid [211340]
+[spawner-16] [INFO] [1758720239.736433939] [spawner_joint_trajectory_controller_ur2]: Setting controller param "params_file" to "/home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml" for joint_trajectory_controller_ur2
+[gazebo-4] [INFO] [1758720239.746109361] [controller_manager]: Loading controller : 'joint_trajectory_controller_ur2' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-4] [INFO] [1758720239.746134452] [controller_manager]: Loading controller 'joint_trajectory_controller_ur2'
+[gazebo-4] [INFO] [1758720239.746198375] [controller_manager]: Controller 'joint_trajectory_controller_ur2' node arguments: --ros-args --params-file /home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml -p use_sim_time:=true --params-file /home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml --param use_sim_time:=true 
+[spawner-16] [INFO] [1758720239.757050975] [spawner_joint_trajectory_controller_ur2]: Loaded joint_trajectory_controller_ur2
+[gazebo-4] [INFO] [1758720239.757554489] [controller_manager]: Configuring controller: 'joint_trajectory_controller_ur2'
+[gazebo-4] [INFO] [1758720239.757617536] [joint_trajectory_controller_ur2]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-4] [INFO] [1758720239.757623931] [joint_trajectory_controller_ur2]: Command interfaces are [position] and state interfaces are [position velocity].
+[gazebo-4] [INFO] [1758720239.757629119] [joint_trajectory_controller_ur2]: Using 'splines' interpolation method.
+[gazebo-4] [INFO] [1758720239.757975105] [joint_trajectory_controller_ur2]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-4] [INFO] [1758720239.778188418] [controller_manager]: Activating controllers: [ joint_trajectory_controller_ur2 ]
+[spawner-16] [INFO] [1758720239.818964701] [spawner_joint_trajectory_controller_ur2]: Configured and activated joint_trajectory_controller_ur2
+[INFO] [spawner-16]: process has finished cleanly [pid 211340]
+[INFO] [spawner-17]: process started with pid [211357]
+[spawner-17] [INFO] [1758720240.185025024] [spawner_joint_trajectory_controller_ur3]: Setting controller param "params_file" to "/home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml" for joint_trajectory_controller_ur3
+[gazebo-4] [INFO] [1758720240.194731170] [controller_manager]: Loading controller : 'joint_trajectory_controller_ur3' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-4] [INFO] [1758720240.194755190] [controller_manager]: Loading controller 'joint_trajectory_controller_ur3'
+[gazebo-4] [INFO] [1758720240.194809812] [controller_manager]: Controller 'joint_trajectory_controller_ur3' node arguments: --ros-args --params-file /home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml -p use_sim_time:=true --params-file /home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml --param use_sim_time:=true 
+[spawner-17] [INFO] [1758720240.203160139] [spawner_joint_trajectory_controller_ur3]: Loaded joint_trajectory_controller_ur3
+[gazebo-4] [INFO] [1758720240.203578060] [controller_manager]: Configuring controller: 'joint_trajectory_controller_ur3'
+[gazebo-4] [INFO] [1758720240.203641209] [joint_trajectory_controller_ur3]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-4] [INFO] [1758720240.203648105] [joint_trajectory_controller_ur3]: Command interfaces are [position] and state interfaces are [position velocity].
+[gazebo-4] [INFO] [1758720240.203653240] [joint_trajectory_controller_ur3]: Using 'splines' interpolation method.
+[gazebo-4] [INFO] [1758720240.204010733] [joint_trajectory_controller_ur3]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-4] [INFO] [1758720240.223422010] [controller_manager]: Activating controllers: [ joint_trajectory_controller_ur3 ]
+[spawner-17] [INFO] [1758720240.266528405] [spawner_joint_trajectory_controller_ur3]: Configured and activated joint_trajectory_controller_ur3
+[INFO] [spawner-17]: process has finished cleanly [pid 211357]
+[INFO] [spawner-18]: process started with pid [211374]
+[spawner-18] [INFO] [1758720240.644314691] [spawner_joint_trajectory_controller_ur4]: waiting for service /controller_manager/list_controllers to become available...
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:533] Creating PostUpdate worker threads: 4
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (0)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (2)
+[spawner-18] [INFO] [1758720241.150443996] [spawner_joint_trajectory_controller_ur4]: Setting controller param "params_file" to "/home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml" for joint_trajectory_controller_ur4
+[gazebo-4] [INFO] [1758720241.164093682] [controller_manager]: Loading controller : 'joint_trajectory_controller_ur4' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-4] [INFO] [1758720241.164118587] [controller_manager]: Loading controller 'joint_trajectory_controller_ur4'
+[gazebo-4] [INFO] [1758720241.164181002] [controller_manager]: Controller 'joint_trajectory_controller_ur4' node arguments: --ros-args --params-file /home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml -p use_sim_time:=true --params-file /home/divyam/four_ur_ws/install/ur_four/share/ur_four/config/four_ur_controllers.yaml --param use_sim_time:=true 
+[spawner-18] [INFO] [1758720241.174142744] [spawner_joint_trajectory_controller_ur4]: Loaded joint_trajectory_controller_ur4
+[gazebo-4] [INFO] [1758720241.174577233] [controller_manager]: Configuring controller: 'joint_trajectory_controller_ur4'
+[gazebo-4] [INFO] [1758720241.174638083] [joint_trajectory_controller_ur4]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-4] [INFO] [1758720241.174644515] [joint_trajectory_controller_ur4]: Command interfaces are [position] and state interfaces are [position velocity].
+[gazebo-4] [INFO] [1758720241.174649741] [joint_trajectory_controller_ur4]: Using 'splines' interpolation method.
+[gazebo-4] [INFO] [1758720241.175011463] [joint_trajectory_controller_ur4]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-4] [INFO] [1758720241.195276829] [controller_manager]: Activating controllers: [ joint_trajectory_controller_ur4 ]
+[spawner-18] [INFO] [1758720241.237611453] [spawner_joint_trajectory_controller_ur4]: Configured and activated joint_trajectory_controller_ur4
+[INFO] [spawner-18]: process has finished cleanly [pid 211374]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [216]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [216] named [good_onion]
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread (2)
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread (0)
+[gazebo-4] [Dbg] [SimulationRunner.cc:533] Creating PostUpdate worker threads: 5
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (0)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (2)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (3)
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_0/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_0/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_0/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_0/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [220]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [220] named [good_onion_0]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [224]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [224] named [bad_real_onion]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_1/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_1/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_1/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_1/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [228]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [228] named [good_onion_1]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_2/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_2/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_2/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_2/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [232]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [232] named [good_onion_2]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_3/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_3/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_3/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_3/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [236]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [236] named [good_onion_3]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [240]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [240] named [bad_onion]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_4/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_4/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_4/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_4/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [244]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [244] named [good_onion_4]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_5/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_5/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_5/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_5/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [248]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [248] named [good_onion_5]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_0/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_0/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_0/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_0/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [252]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [252] named [bad_onion_0]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_0/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_0/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_0/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_0/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [256]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [256] named [bad_real_onion_0]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_1/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_1/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_1/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_1/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [260]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [260] named [bad_onion_1]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_2/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_2/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_2/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_2/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [264]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [264] named [bad_onion_2]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_3/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_3/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_3/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_3/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [268]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [268] named [bad_onion_3]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_6/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_6/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_6/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_6/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [272]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [272] named [good_onion_6]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_1/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_1/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_1/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_1/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [276]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [276] named [bad_real_onion_1]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_7/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_7/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_7/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_7/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [280]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [280] named [good_onion_7]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_2/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_2/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_2/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_2/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [284]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [284] named [bad_real_onion_2]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_4/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_4/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_4/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_4/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [288]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [288] named [bad_onion_4]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_5/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_5/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_5/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_5/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [292]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [292] named [bad_onion_5]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_8/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_8/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_8/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_8/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [296]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [296] named [good_onion_8]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_6/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_6/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_6/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_6/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [300]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [300] named [bad_onion_6]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_9/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_9/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_9/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_9/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [304]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [304] named [good_onion_9]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_7/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_7/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_7/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_7/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [308]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [308] named [bad_onion_7]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_8/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_8/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_8/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_8/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [312]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [312] named [bad_onion_8]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_3/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_3/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_3/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_3/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [316]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [316] named [bad_real_onion_3]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_4/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_4/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_4/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_4/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [320]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [320] named [bad_real_onion_4]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_5/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_5/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_5/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_5/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [324]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [324] named [bad_real_onion_5]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_6/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_6/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_6/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_6/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [328]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [328] named [bad_real_onion_6]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_7/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_7/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_7/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_7/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [332]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [332] named [bad_real_onion_7]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_10/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_10/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_10/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_10/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [336]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [336] named [good_onion_10]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_8/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_8/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_8/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_8/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [340]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [340] named [bad_real_onion_8]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_9/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_9/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_9/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_9/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [344]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [344] named [bad_real_onion_9]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "good_onion_11/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/good_onion_11/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/good_onion_11/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/good_onion_11/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [348]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [348] named [good_onion_11]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_10/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_10/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_10/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_10/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [352]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [352] named [bad_real_onion_10]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_11/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_11/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_11/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_11/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [356]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [356] named [bad_real_onion_11]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_9/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_9/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_9/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_9/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [360]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [360] named [bad_onion_9]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_10/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_10/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_10/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_10/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [364]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [364] named [bad_onion_10]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_onion_11/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_onion_11/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_onion_11/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_onion_11/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [368]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [368] named [bad_onion_11]
+[gazebo-4] [Dbg] [OdometryPublisher.cc:190] OdometryPublisher system plugin missing <robot_base_frame>, defaults to "bad_real_onion_12/base_footprint"
+[gazebo-4] [Msg] OdometryPublisher publishing odometry on [/model/bad_real_onion_12/odometry]
+[gazebo-4] [Msg] OdometryPublisher publishing odometry with covariance on [/model/bad_real_onion_12/odometry_with_covariance]
+[gazebo-4] [Msg] OdometryPublisher publishing Pose_V (TF) on [/model/bad_real_onion_12/pose]
+[gazebo-4] [Dbg] [SystemManager.cc:80] Loaded system [gz::sim::systems::OdometryPublisher] for entity [372]
+[gazebo-4] [Dbg] [UserCommands.cc:1318] Created entity [372] named [bad_real_onion_12]
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread ([Dbg] [SimulationRunner.cc:560] 22Exiting postupdate worker thread (33
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] 
+[gazebo-4] [Dbg] [SimulationRunner.cc:560] Exiting postupdate worker thread ()
+[gazebo-4] 0)
+[gazebo-4] Exiting postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:533] Creating PostUpdate worker threads: 44
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (0)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (1)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (2)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (3)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (4)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (5)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (6)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (7)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (8)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (9)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (10)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (11)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (12)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (13)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (14)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (15)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (16)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (17)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (18)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (19)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (20)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (21)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (22)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (23)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (24)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (25)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (26)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (27)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (28)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (29)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (30)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (31)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (32)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (33)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (34)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (35)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (36)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (37)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (38)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (39)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (40)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (41)
+[gazebo-4] [Dbg] [SimulationRunner.cc:544] Creating postupdate worker thread (42)
+[gazebo-4] [INFO] [1758720449.209613463] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720449.209656089] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720451.327533002] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720465.074454315] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720465.074474455] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720466.446445233] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720476.987037605] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720476.987063491] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720477.714022337] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720481.524167101] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720481.524202050] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720482.210183631] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720495.426162154] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720495.426183413] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720496.266551964] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720511.153763715] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720511.153784735] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720512.372102791] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720649.670914378] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720649.670945018] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720652.737259649] [joint_trajectory_controller_ur3]: Goal reached, success!
+[gazebo-4] [INFO] [1758720655.797598323] [joint_trajectory_controller_ur3]: Received new action goal
+[gazebo-4] [INFO] [1758720655.797613458] [joint_trajectory_controller_ur3]: Accepted new action goal
+[gazebo-4] [INFO] [1758720658.794763050] [joint_trajectory_controller_ur3]: Goal reached, success!

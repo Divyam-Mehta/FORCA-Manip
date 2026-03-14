@@ -1,0 +1,2497 @@
+<?xml version="1.0" ?>
+
+<robot name="ur">
+  <link name="world"/>
+  
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="light_grey">
+    <color rgba="0.8 0.8 0.8 1.0"/>
+  </material>
+  
+
+
+
+  <link name="UR2_base_link"/>
+  <link name="UR2_base_link_inertia">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/base.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/base.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0030531654454" ixy="0.0" ixz="0.0" iyy="0.0030531654454" iyz="0.0" izz="0.005625"/>
+    </inertial>
+  </link>
+  <link name="UR2_shoulder_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/shoulder.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/shoulder.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.98"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.008012231795105998" ixy="0.0" ixz="0.0" iyy="0.008012231795105998" iyz="0.0" izz="0.00556875"/>
+    </inertial>
+  </link>
+  <link name="UR2_upper_arm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/upperarm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/upperarm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.4445"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.121825 0.0 0.12"/>
+      <inertia ixx="0.021884140483944475" ixy="0.0" ixz="0.0" iyy="0.021884140483944475" iyz="0.0" izz="0.00968765625"/>
+    </inertial>
+  </link>
+  <link name="UR2_forearm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/forearm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/forearm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.437"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.1066 0.0 0.027"/>
+      <inertia ixx="0.0074639235044294035" ixy="0.0" ixz="0.0" iyy="0.0074639235044294035" iyz="0.0" izz="0.0040415625"/>
+    </inertial>
+  </link>
+  <link name="UR2_wrist_1_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist1.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.871"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0022700428419824997" ixy="0.0" ixz="0.0" iyy="0.0022700428419824997" iyz="0.0" izz="0.0024496874999999996"/>
+    </inertial>
+  </link>
+  <link name="UR2_wrist_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist2.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.805"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0020980304107875002" ixy="0.0" ixz="0.0" iyy="0.0020980304107875002" iyz="0.0" izz="0.0022640625"/>
+    </inertial>
+  </link>
+  <link name="UR2_wrist_3_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist3.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.261"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.02"/>
+      <inertia ixx="0.0001016159593536" ixy="0.0" ixz="0.0" iyy="0.0001016159593536" iyz="0.0" izz="0.000133632"/>
+    </inertial>
+  </link>
+  <!-- base_joint fixes base_link to the environment -->
+  <joint name="UR2_base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.15 0.35"/>
+    <parent link="UR2_support_pillar"/>
+    <child link="UR2_base_link"/>
+  </joint>
+  <!-- joints - main serial chain -->
+  <joint name="UR2_base_link-base_link_inertia" type="fixed">
+    <parent link="UR2_base_link"/>
+    <child link="UR2_base_link_inertia"/>
+    <!-- 'base_link' is REP-103 aligned (so X+ forward), while the internal
+           frames of the robot/controller have X+ pointing backwards.
+           Use the joint between 'base_link' and 'base_link_inertia' (a dummy
+           link/frame) to introduce the necessary rotation over Z (of pi rad).
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+  </joint>
+  <joint name="UR2_shoulder_pan_joint" type="revolute">
+    <parent link="UR2_base_link_inertia"/>
+    <child link="UR2_shoulder_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.15185"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR2_shoulder_lift_joint" type="revolute">
+    <parent link="UR2_shoulder_link"/>
+    <child link="UR2_upper_arm_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR2_elbow_joint" type="revolute">
+    <parent link="UR2_upper_arm_link"/>
+    <child link="UR2_forearm_link"/>
+    <origin rpy="0 0 0" xyz="-0.24355 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="28.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-2.991592653589793" soft_upper_limit="2.991592653589793"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR2_wrist_1_joint" type="revolute">
+    <parent link="UR2_forearm_link"/>
+    <child link="UR2_wrist_1_link"/>
+    <origin rpy="0 0 0" xyz="-0.2132 0 0.13105"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR2_wrist_2_joint" type="revolute">
+    <parent link="UR2_wrist_1_link"/>
+    <child link="UR2_wrist_2_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.08535 -1.750557762378351e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR2_wrist_3_joint" type="revolute">
+    <parent link="UR2_wrist_2_link"/>
+    <child link="UR2_wrist_3_link"/>
+    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.0921 -1.8890025766262e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <link name="UR2_ft_frame"/>
+  <joint name="UR2_wrist_3_link-ft_frame" type="fixed">
+    <parent link="UR2_wrist_3_link"/>
+    <child link="UR2_ft_frame"/>
+    <origin rpy="3.141592653589793 0 0" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
+  <link name="UR2_base"/>
+  <joint name="UR2_base_link-base_fixed_joint" type="fixed">
+    <!-- Note the rotation over Z of pi radians - as base_link is REP-103
+           aligned (i.e., has X+ forward, Y+ left and Z+ up), this is needed
+           to correctly align 'base' with the 'Base' coordinate system of
+           the UR controller.
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+    <parent link="UR2_base_link"/>
+    <child link="UR2_base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
+  <link name="UR2_flange"/>
+  <joint name="UR2_wrist_3-flange" type="fixed">
+    <parent link="UR2_wrist_3_link"/>
+    <child link="UR2_flange"/>
+    <origin rpy="0 -1.5707963267948966 -1.5707963267948966" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
+  <link name="UR2_tool0"/>
+  <joint name="UR2_flange-tool0" type="fixed">
+    <!-- default toolframe - X+ left, Y+ up, Z+ front -->
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+    <parent link="UR2_flange"/>
+    <child link="UR2_tool0"/>
+  </joint>
+  <link name="UR2_quick_change_robot_side">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/common/Quick_Changer_RobotSide_v2.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.008"/>
+      <geometry>
+        <cylinder length="0.015" radius="0.045"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR2_gripper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="UR2_gripper">
+      <origin rpy="3.1415 -1.5708 0" xyz="0.0075 0.0055 0 "/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/onrobot_sg_b/meshes/SG-b_v1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <cylinder length="0.10" radius="0.049"/>
+        <!-- Still doesn't cover full gripper length, but we need to dip and cover objects to grasp, so left some room-->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="UR2_quick_changer_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <parent link="UR2_quick_change_robot_side"/>
+    <child link="UR2_gripper"/>
+  </joint>
+  <!-- <link name="world" /> -->
+  <link name="UR2_support_pillar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR2_rear_pillar_v1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR2_rear_pillar_v2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR2_rear_pillar_h">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="world" publish_pointcloud="true">
+    <origin xyz="-0.25 -0.36 1.25" rpy="0 0.7 1.5" />
+  </xacro:sensor_d435-->
+  <!-- <link name="vention_assembly">
+      <inertial>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <mass value="16.45"/>
+        <inertia ixx="15.78" ixy="6.8" ixz="-13.73" iyy="34.55" iyz="-2.76" izz="33.82"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+        <material name="5,5,5"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+      </collision>
+  </link> -->
+  <!-- fix the ur robot in place -->
+  <joint name="world_to_UR2_pillar" type="fixed">
+    <origin rpy="0 0 1.57" xyz="1.25 -0.70 0.35"/>
+    <parent link="world"/>
+    <child link="UR2_support_pillar"/>
+  </joint>
+  <!-- <joint name="pillar_to_$(arg prefix_2)base" type="fixed">
+  <origin xyz="0 0.15 0.35" rpy="0 0 0"/>
+  <parent link="$(arg prefix_2)support_pillar"/>
+  <child link="$(arg prefix_2)base_link"/>
+  </joint> -->
+  <joint name="pillar_to_UR2_rear_pillar_v1" type="fixed">
+    <origin rpy="0 0 0" xyz="0.34 -0.25 0.7"/>
+    <parent link="UR2_support_pillar"/>
+    <child link="UR2_rear_pillar_v1"/>
+  </joint>
+  <joint name="pillar_to_UR2_rear_pillar_v2" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.34 -0.25 0.7"/>
+    <parent link="UR2_support_pillar"/>
+    <child link="UR2_rear_pillar_v2"/>
+  </joint>
+  <joint name="pillar_to_UR2_rear_pillar_h" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.25 0.9"/>
+    <parent link="UR2_support_pillar"/>
+    <child link="UR2_rear_pillar_h"/>
+  </joint>
+  <!-- <joint name="world_to_assembly" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="vention_assembly"/>
+  </joint> -->
+  <!-- <joint name="vention_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="vention_assembly"/>
+    <child link="base_link"/>
+  </joint>  -->
+  <joint name="UR2_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <parent link="UR2_tool0"/>
+    <child link="UR2_quick_change_robot_side"/>
+  </joint>
+  <!-- fix the conveyor belt in place >
+  <joint name="world_to_conveyor_base" type="fixed">
+    <origin xyz="0 1 1.26458" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="conveyor_base"/>
+  </joint-->
+  <!-- <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint> -->
+  <gazebo reference="UR2_support_pillar">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR2_rear_pillar_v1">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR2_rear_pillar_v2">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR2_rear_pillar_h">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- <gazebo reference="vention_assembly">
+      <selfCollide>true</selfCollide>
+  </gazebo> -->
+  <gazebo reference="UR2_quick_change_robot_side">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <disable_collisions link1="UR2_base_link" link2="UR2_support_pillar" reason="Adjacent"/>
+  <!-- <disable_collisions link1="base_link" link2="vention_assembly" reason="Adjacent" /> -->
+  <disable_collisions link1="UR2_tool0" link2="UR2_quick_change_robot_side" reason="Adjacent"/>
+
+
+
+
+
+
+
+
+ 
+ 
+  <link name="UR1_base_link"/>
+  <link name="UR1_base_link_inertia">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/base.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/base.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0030531654454" ixy="0.0" ixz="0.0" iyy="0.0030531654454" iyz="0.0" izz="0.005625"/>
+    </inertial>
+  </link>
+  <link name="UR1_shoulder_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/shoulder.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/shoulder.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.98"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.008012231795105998" ixy="0.0" ixz="0.0" iyy="0.008012231795105998" iyz="0.0" izz="0.00556875"/>
+    </inertial>
+  </link>
+  <link name="UR1_upper_arm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/upperarm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/upperarm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.4445"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.121825 0.0 0.12"/>
+      <inertia ixx="0.021884140483944475" ixy="0.0" ixz="0.0" iyy="0.021884140483944475" iyz="0.0" izz="0.00968765625"/>
+    </inertial>
+  </link>
+  <link name="UR1_forearm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/forearm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/forearm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.437"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.1066 0.0 0.027"/>
+      <inertia ixx="0.0074639235044294035" ixy="0.0" ixz="0.0" iyy="0.0074639235044294035" iyz="0.0" izz="0.0040415625"/>
+    </inertial>
+  </link>
+  <link name="UR1_wrist_1_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist1.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.871"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0022700428419824997" ixy="0.0" ixz="0.0" iyy="0.0022700428419824997" iyz="0.0" izz="0.0024496874999999996"/>
+    </inertial>
+  </link>
+  <link name="UR1_wrist_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist2.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.805"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0020980304107875002" ixy="0.0" ixz="0.0" iyy="0.0020980304107875002" iyz="0.0" izz="0.0022640625"/>
+    </inertial>
+  </link>
+  <link name="UR1_wrist_3_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist3.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.261"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.02"/>
+      <inertia ixx="0.0001016159593536" ixy="0.0" ixz="0.0" iyy="0.0001016159593536" iyz="0.0" izz="0.000133632"/>
+    </inertial>
+  </link>
+  <!-- base_joint fixes base_link to the environment -->
+  <joint name="UR1_base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.15 0.35"/>
+    <parent link="UR1_support_pillar"/>
+    <child link="UR1_base_link"/>
+  </joint>
+  <!-- joints - main serial chain -->
+  <joint name="UR1_base_link-base_link_inertia" type="fixed">
+    <parent link="UR1_base_link"/>
+    <child link="UR1_base_link_inertia"/>
+    <!-- 'base_link' is REP-103 aligned (so X+ forward), while the internal
+           frames of the robot/controller have X+ pointing backwards.
+           Use the joint between 'base_link' and 'base_link_inertia' (a dummy
+           link/frame) to introduce the necessary rotation over Z (of pi rad).
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+  </joint>
+  <joint name="UR1_shoulder_pan_joint" type="revolute">
+    <parent link="UR1_base_link_inertia"/>
+    <child link="UR1_shoulder_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.15185"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR1_shoulder_lift_joint" type="revolute">
+    <parent link="UR1_shoulder_link"/>
+    <child link="UR1_upper_arm_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR1_elbow_joint" type="revolute">
+    <parent link="UR1_upper_arm_link"/>
+    <child link="UR1_forearm_link"/>
+    <origin rpy="0 0 0" xyz="-0.24355 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="28.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-2.991592653589793" soft_upper_limit="2.991592653589793"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR1_wrist_1_joint" type="revolute">
+    <parent link="UR1_forearm_link"/>
+    <child link="UR1_wrist_1_link"/>
+    <origin rpy="0 0 0" xyz="-0.2132 0 0.13105"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR1_wrist_2_joint" type="revolute">
+    <parent link="UR1_wrist_1_link"/>
+    <child link="UR1_wrist_2_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.08535 -1.750557762378351e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR1_wrist_3_joint" type="revolute">
+    <parent link="UR1_wrist_2_link"/>
+    <child link="UR1_wrist_3_link"/>
+    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.0921 -1.8890025766262e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <link name="UR1_ft_frame"/>
+  <joint name="UR1_wrist_3_link-ft_frame" type="fixed">
+    <parent link="UR1_wrist_3_link"/>
+    <child link="UR1_ft_frame"/>
+    <origin rpy="3.141592653589793 0 0" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
+  <link name="UR1_base"/>
+  <joint name="UR1_base_link-base_fixed_joint" type="fixed">
+    <!-- Note the rotation over Z of pi radians - as base_link is REP-103
+           aligned (i.e., has X+ forward, Y+ left and Z+ up), this is needed
+           to correctly align 'base' with the 'Base' coordinate system of
+           the UR controller.
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+    <parent link="UR1_base_link"/>
+    <child link="UR1_base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
+  <link name="UR1_flange"/>
+  <joint name="UR1_wrist_3-flange" type="fixed">
+    <parent link="UR1_wrist_3_link"/>
+    <child link="UR1_flange"/>
+    <origin rpy="0 -1.5707963267948966 -1.5707963267948966" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
+  <link name="UR1_tool0"/>
+  <joint name="UR1_flange-tool0" type="fixed">
+    <!-- default toolframe - X+ left, Y+ up, Z+ front -->
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+    <parent link="UR1_flange"/>
+    <child link="UR1_tool0"/>
+  </joint>
+  <!-- Add URDF transmission elements (for ros_control) -->
+  <!--<xacro:ur_arm_transmission prefix="${prefix}" hw_interface="${transmission_hw_interface}" />-->
+  <!-- Placeholder for ros2_control transmission which don't yet exist -->
+
+
+  
+  <link name="UR1_quick_change_robot_side">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/common/Quick_Changer_RobotSide_v2.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.008"/>
+      <geometry>
+        <cylinder length="0.015" radius="0.045"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR1_gripper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="UR1_gripper">
+      <origin rpy="3.1415 -1.5708 0" xyz="0.0075 0.0055 0 "/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/onrobot_sg_b/meshes/SG-b_v1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <cylinder length="0.10" radius="0.049"/>
+        <!-- Still doesn't cover full gripper length, but we need to dip and cover objects to grasp, so left some room-->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="UR1_quick_changer_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <parent link="UR1_quick_change_robot_side"/>
+    <child link="UR1_gripper"/>
+  </joint>
+  <!-- <link name="world" /> -->
+  <link name="UR1_support_pillar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR1_rear_pillar_v1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR1_rear_pillar_v2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR1_rear_pillar_h">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="world" publish_pointcloud="true">
+    <origin xyz="-0.25 -0.36 1.25" rpy="0 0.7 1.5" />
+  </xacro:sensor_d435-->
+  <!-- <link name="vention_assembly">
+      <inertial>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <mass value="16.45"/>
+        <inertia ixx="15.78" ixy="6.8" ixz="-13.73" iyy="34.55" iyz="-2.76" izz="33.82"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+        <material name="5,5,5"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+      </collision>
+  </link> -->
+  <!-- fix the ur robot in place -->
+  <joint name="world_to_UR1_pillar" type="fixed">
+    <origin rpy="0 0 -1.57" xyz="0.25 -0.20 0.35"/>
+    <parent link="world"/>
+    <child link="UR1_support_pillar"/>
+  </joint>
+  <!-- <joint name="pillar_to_$(arg prefix_1)base" type="fixed">
+  <origin xyz="0 0.15 0.35" rpy="0 0 0"/>
+  <parent link="$(arg prefix_1)support_pillar"/>
+  <child link="$(arg prefix_1)base_link"/>
+  </joint> -->
+  <joint name="pillar_to_UR1_rear_pillar_v1" type="fixed">
+    <origin rpy="0 0 0" xyz="0.34 -0.25 0.7"/>
+    <parent link="UR1_support_pillar"/>
+    <child link="UR1_rear_pillar_v1"/>
+  </joint>
+  <joint name="pillar_to_UR1_rear_pillar_v2" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.34 -0.25 0.7"/>
+    <parent link="UR1_support_pillar"/>
+    <child link="UR1_rear_pillar_v2"/>
+  </joint>
+  <joint name="pillar_to_UR1_rear_pillar_h" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.25 0.9"/>
+    <parent link="UR1_support_pillar"/>
+    <child link="UR1_rear_pillar_h"/>
+  </joint>
+  <!-- <joint name="world_to_assembly" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="vention_assembly"/>
+  </joint> -->
+  <!-- <joint name="vention_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="vention_assembly"/>
+    <child link="base_link"/>
+  </joint>  -->
+  <joint name="UR1_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <parent link="UR1_tool0"/>
+    <child link="UR1_quick_change_robot_side"/>
+  </joint>
+  <!-- fix the conveyor belt in place >
+  <joint name="world_to_conveyor_base" type="fixed">
+    <origin xyz="0 1 1.26458" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="conveyor_base"/>
+  </joint-->
+  <!-- <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint> -->
+  <gazebo reference="UR1_support_pillar">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR1_rear_pillar_v1">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR1_rear_pillar_v2">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR1_rear_pillar_h">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- <gazebo reference="vention_assembly">
+      <selfCollide>true</selfCollide>
+  </gazebo> -->
+  <gazebo reference="UR1_quick_change_robot_side">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <disable_collisions link1="UR1_base_link" link2="UR1_support_pillar" reason="Adjacent"/>
+  <!-- <disable_collisions link1="base_link" link2="vention_assembly" reason="Adjacent" /> -->
+  <disable_collisions link1="UR1_tool0" link2="UR1_quick_change_robot_side" reason="Adjacent"/>
+  
+
+
+
+
+
+
+
+
+
+
+  <link name="UR3_base_link"/>
+  <link name="UR3_base_link_inertia">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/base.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/base.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0030531654454" ixy="0.0" ixz="0.0" iyy="0.0030531654454" iyz="0.0" izz="0.005625"/>
+    </inertial>
+  </link>
+  <link name="UR3_shoulder_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/shoulder.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/shoulder.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.98"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.008012231795105998" ixy="0.0" ixz="0.0" iyy="0.008012231795105998" iyz="0.0" izz="0.00556875"/>
+    </inertial>
+  </link>
+  <link name="UR3_upper_arm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/upperarm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/upperarm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.4445"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.121825 0.0 0.12"/>
+      <inertia ixx="0.021884140483944475" ixy="0.0" ixz="0.0" iyy="0.021884140483944475" iyz="0.0" izz="0.00968765625"/>
+    </inertial>
+  </link>
+  <link name="UR3_forearm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/forearm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/forearm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.437"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.1066 0.0 0.027"/>
+      <inertia ixx="0.0074639235044294035" ixy="0.0" ixz="0.0" iyy="0.0074639235044294035" iyz="0.0" izz="0.0040415625"/>
+    </inertial>
+  </link>
+  <link name="UR3_wrist_1_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist1.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.871"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0022700428419824997" ixy="0.0" ixz="0.0" iyy="0.0022700428419824997" iyz="0.0" izz="0.0024496874999999996"/>
+    </inertial>
+  </link>
+  <link name="UR3_wrist_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist2.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.805"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0020980304107875002" ixy="0.0" ixz="0.0" iyy="0.0020980304107875002" iyz="0.0" izz="0.0022640625"/>
+    </inertial>
+  </link>
+  <link name="UR3_wrist_3_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist3.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.261"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.02"/>
+      <inertia ixx="0.0001016159593536" ixy="0.0" ixz="0.0" iyy="0.0001016159593536" iyz="0.0" izz="0.000133632"/>
+    </inertial>
+  </link>
+  <!-- base_joint fixes base_link to the environment -->
+  <joint name="UR3_base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.15 0.35"/>
+    <parent link="UR3_support_pillar"/>
+    <child link="UR3_base_link"/>
+  </joint>
+  <!-- joints - main serial chain -->
+  <joint name="UR3_base_link-base_link_inertia" type="fixed">
+    <parent link="UR3_base_link"/>
+    <child link="UR3_base_link_inertia"/>
+    <!-- 'base_link' is REP-103 aligned (so X+ forward), while the internal
+           frames of the robot/controller have X+ pointing backwards.
+           Use the joint between 'base_link' and 'base_link_inertia' (a dummy
+           link/frame) to introduce the necessary rotation over Z (of pi rad).
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+  </joint>
+  <joint name="UR3_shoulder_pan_joint" type="revolute">
+    <parent link="UR3_base_link_inertia"/>
+    <child link="UR3_shoulder_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.15185"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR3_shoulder_lift_joint" type="revolute">
+    <parent link="UR3_shoulder_link"/>
+    <child link="UR3_upper_arm_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR3_elbow_joint" type="revolute">
+    <parent link="UR3_upper_arm_link"/>
+    <child link="UR3_forearm_link"/>
+    <origin rpy="0 0 0" xyz="-0.24355 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="28.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-2.991592653589793" soft_upper_limit="2.991592653589793"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR3_wrist_1_joint" type="revolute">
+    <parent link="UR3_forearm_link"/>
+    <child link="UR3_wrist_1_link"/>
+    <origin rpy="0 0 0" xyz="-0.2132 0 0.13105"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR3_wrist_2_joint" type="revolute">
+    <parent link="UR3_wrist_1_link"/>
+    <child link="UR3_wrist_2_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.08535 -1.750557762378351e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR3_wrist_3_joint" type="revolute">
+    <parent link="UR3_wrist_2_link"/>
+    <child link="UR3_wrist_3_link"/>
+    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.0921 -1.8890025766262e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <link name="UR3_ft_frame"/>
+  <joint name="UR3_wrist_3_link-ft_frame" type="fixed">
+    <parent link="UR3_wrist_3_link"/>
+    <child link="UR3_ft_frame"/>
+    <origin rpy="3.141592653589793 0 0" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
+  <link name="UR3_base"/>
+  <joint name="UR3_base_link-base_fixed_joint" type="fixed">
+    <!-- Note the rotation over Z of pi radians - as base_link is REP-103
+           aligned (i.e., has X+ forward, Y+ left and Z+ up), this is needed
+           to correctly align 'base' with the 'Base' coordinate system of
+           the UR controller.
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+    <parent link="UR3_base_link"/>
+    <child link="UR3_base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
+  <link name="UR3_flange"/>
+  <joint name="UR3_wrist_3-flange" type="fixed">
+    <parent link="UR3_wrist_3_link"/>
+    <child link="UR3_flange"/>
+    <origin rpy="0 -1.5707963267948966 -1.5707963267948966" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
+  <link name="UR3_tool0"/>
+  <joint name="UR3_flange-tool0" type="fixed">
+    <!-- default toolframe - X+ left, Y+ up, Z+ front -->
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+    <parent link="UR3_flange"/>
+    <child link="UR3_tool0"/>
+  </joint>
+  <!-- Add URDF transmission elements (for ros_control) -->
+  <!--<xacro:ur_arm_transmission prefix="${prefix}" hw_interface="${transmission_hw_interface}" />-->
+  <!-- Placeholder for ros2_control transmission which don't yet exist -->
+
+
+  
+  <link name="UR3_quick_change_robot_side">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/common/Quick_Changer_RobotSide_v2.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.008"/>
+      <geometry>
+        <cylinder length="0.015" radius="0.045"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR3_gripper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="UR3_gripper">
+      <origin rpy="3.1415 -1.5708 0" xyz="0.0075 0.0055 0 "/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/onrobot_sg_b/meshes/SG-b_v1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <cylinder length="0.10" radius="0.049"/>
+        <!-- Still doesn't cover full gripper length, but we need to dip and cover objects to grasp, so left some room-->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="UR3_quick_changer_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <parent link="UR3_quick_change_robot_side"/>
+    <child link="UR3_gripper"/>
+  </joint>
+  <!-- <link name="world" /> -->
+  <link name="UR3_support_pillar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR3_rear_pillar_v1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR3_rear_pillar_v2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR3_rear_pillar_h">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="world" publish_pointcloud="true">
+    <origin xyz="-0.25 -0.36 1.25" rpy="0 0.7 1.5" />
+  </xacro:sensor_d435-->
+  <!-- <link name="vention_assembly">
+      <inertial>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <mass value="16.45"/>
+        <inertia ixx="15.78" ixy="6.8" ixz="-13.73" iyy="34.55" iyz="-2.76" izz="33.82"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+        <material name="5,5,5"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+      </collision>
+  </link> -->
+  <!-- fix the ur robot in place -->
+  <joint name="world_to_UR3_pillar" type="fixed">
+    <origin rpy="0 0 -1.57" xyz="0.25 0.80 0.35"/>
+    <parent link="world"/>
+    <child link="UR3_support_pillar"/>
+  </joint>
+  <!-- <joint name="pillar_to_$(arg prefix_1)base" type="fixed">
+  <origin xyz="0 0.15 0.35" rpy="0 0 0"/>
+  <parent link="$(arg prefix_1)support_pillar"/>
+  <child link="$(arg prefix_1)base_link"/>
+  </joint> -->
+  <joint name="pillar_to_UR3_rear_pillar_v1" type="fixed">
+    <origin rpy="0 0 0" xyz="0.34 -0.25 0.7"/>
+    <parent link="UR3_support_pillar"/>
+    <child link="UR3_rear_pillar_v1"/>
+  </joint>
+  <joint name="pillar_to_UR3_rear_pillar_v2" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.34 -0.25 0.7"/>
+    <parent link="UR3_support_pillar"/>
+    <child link="UR3_rear_pillar_v2"/>
+  </joint>
+  <joint name="pillar_to_UR3_rear_pillar_h" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.25 0.9"/>
+    <parent link="UR3_support_pillar"/>
+    <child link="UR3_rear_pillar_h"/>
+  </joint>
+  <!-- <joint name="world_to_assembly" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="vention_assembly"/>
+  </joint> -->
+  <!-- <joint name="vention_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="vention_assembly"/>
+    <child link="base_link"/>
+  </joint>  -->
+  <joint name="UR3_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <parent link="UR3_tool0"/>
+    <child link="UR3_quick_change_robot_side"/>
+  </joint>
+  <!-- fix the conveyor belt in place >
+  <joint name="world_to_conveyor_base" type="fixed">
+    <origin xyz="0 1 1.26458" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="conveyor_base"/>
+  </joint-->
+  <!-- <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint> -->
+  <gazebo reference="UR3_support_pillar">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR3_rear_pillar_v1">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR3_rear_pillar_v2">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR3_rear_pillar_h">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- <gazebo reference="vention_assembly">
+      <selfCollide>true</selfCollide>
+  </gazebo> -->
+  <gazebo reference="UR3_quick_change_robot_side">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <disable_collisions link1="UR3_base_link" link2="UR3_support_pillar" reason="Adjacent"/>
+  <!-- <disable_collisions link1="base_link" link2="vention_assembly" reason="Adjacent" /> -->
+  <disable_collisions link1="UR3_tool0" link2="UR3_quick_change_robot_side" reason="Adjacent"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link name="UR4_base_link"/>
+  <link name="UR4_base_link_inertia">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/base.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/base.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0030531654454" ixy="0.0" ixz="0.0" iyy="0.0030531654454" iyz="0.0" izz="0.005625"/>
+    </inertial>
+  </link>
+  <link name="UR4_shoulder_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/shoulder.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/shoulder.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.98"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.008012231795105998" ixy="0.0" ixz="0.0" iyy="0.008012231795105998" iyz="0.0" izz="0.00556875"/>
+    </inertial>
+  </link>
+  <link name="UR4_upper_arm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/upperarm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.12"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/upperarm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.4445"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.121825 0.0 0.12"/>
+      <inertia ixx="0.021884140483944475" ixy="0.0" ixz="0.0" iyy="0.021884140483944475" iyz="0.0" izz="0.00968765625"/>
+    </inertial>
+  </link>
+  <link name="UR4_forearm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/forearm.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.027"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/forearm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.437"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="-0.1066 0.0 0.027"/>
+      <inertia ixx="0.0074639235044294035" ixy="0.0" ixz="0.0" iyy="0.0074639235044294035" iyz="0.0" izz="0.0040415625"/>
+    </inertial>
+  </link>
+  <link name="UR4_wrist_1_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist1.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.104"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.871"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0022700428419824997" ixy="0.0" ixz="0.0" iyy="0.0022700428419824997" iyz="0.0" izz="0.0024496874999999996"/>
+    </inertial>
+  </link>
+  <link name="UR4_wrist_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist2.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.08535"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.805"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0020980304107875002" ixy="0.0" ixz="0.0" iyy="0.0020980304107875002" iyz="0.0" izz="0.0022640625"/>
+    </inertial>
+  </link>
+  <link name="UR4_wrist_3_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/visual/wrist3.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0921"/>
+      <geometry>
+        <mesh filename="file:///opt/ros/jazzy/share/ur_description/meshes/ur3e/collision/wrist3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.261"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.02"/>
+      <inertia ixx="0.0001016159593536" ixy="0.0" ixz="0.0" iyy="0.0001016159593536" iyz="0.0" izz="0.000133632"/>
+    </inertial>
+  </link>
+  <!-- base_joint fixes base_link to the environment -->
+  <joint name="UR4_base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.15 0.35"/>
+    <parent link="UR4_support_pillar"/>
+    <child link="UR4_base_link"/>
+  </joint>
+  <!-- joints - main serial chain -->
+  <joint name="UR4_base_link-base_link_inertia" type="fixed">
+    <parent link="UR4_base_link"/>
+    <child link="UR4_base_link_inertia"/>
+    <!-- 'base_link' is REP-103 aligned (so X+ forward), while the internal
+           frames of the robot/controller have X+ pointing backwards.
+           Use the joint between 'base_link' and 'base_link_inertia' (a dummy
+           link/frame) to introduce the necessary rotation over Z (of pi rad).
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+  </joint>
+  <joint name="UR4_shoulder_pan_joint" type="revolute">
+    <parent link="UR4_base_link_inertia"/>
+    <child link="UR4_shoulder_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.15185"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR4_shoulder_lift_joint" type="revolute">
+    <parent link="UR4_shoulder_link"/>
+    <child link="UR4_upper_arm_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="56.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR4_elbow_joint" type="revolute">
+    <parent link="UR4_upper_arm_link"/>
+    <child link="UR4_forearm_link"/>
+    <origin rpy="0 0 0" xyz="-0.24355 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="28.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="3.141592653589793"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-2.991592653589793" soft_upper_limit="2.991592653589793"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR4_wrist_1_joint" type="revolute">
+    <parent link="UR4_forearm_link"/>
+    <child link="UR4_wrist_1_link"/>
+    <origin rpy="0 0 0" xyz="-0.2132 0 0.13105"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR4_wrist_2_joint" type="revolute">
+    <parent link="UR4_wrist_1_link"/>
+    <child link="UR4_wrist_2_link"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.08535 -1.750557762378351e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <joint name="UR4_wrist_3_joint" type="revolute">
+    <parent link="UR4_wrist_2_link"/>
+    <child link="UR4_wrist_3_link"/>
+    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.0921 -1.8890025766262e-11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="12.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="6.283185307179586"/>
+    <safety_controller k_position="20" k_velocity="0.0" soft_lower_limit="-6.133185307179586" soft_upper_limit="6.133185307179586"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+  <link name="UR4_ft_frame"/>
+  <joint name="UR4_wrist_3_link-ft_frame" type="fixed">
+    <parent link="UR4_wrist_3_link"/>
+    <child link="UR4_ft_frame"/>
+    <origin rpy="3.141592653589793 0 0" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
+  <link name="UR4_base"/>
+  <joint name="UR4_base_link-base_fixed_joint" type="fixed">
+    <!-- Note the rotation over Z of pi radians - as base_link is REP-103
+           aligned (i.e., has X+ forward, Y+ left and Z+ up), this is needed
+           to correctly align 'base' with the 'Base' coordinate system of
+           the UR controller.
+      -->
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+    <parent link="UR4_base_link"/>
+    <child link="UR4_base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
+  <link name="UR4_flange"/>
+  <joint name="UR4_wrist_3-flange" type="fixed">
+    <parent link="UR4_wrist_3_link"/>
+    <child link="UR4_flange"/>
+    <origin rpy="0 -1.5707963267948966 -1.5707963267948966" xyz="0 0 0"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
+  <link name="UR4_tool0"/>
+  <joint name="UR4_flange-tool0" type="fixed">
+    <!-- default toolframe - X+ left, Y+ up, Z+ front -->
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+    <parent link="UR4_flange"/>
+    <child link="UR4_tool0"/>
+  </joint>
+  <!-- Add URDF transmission elements (for ros_control) -->
+  <!--<xacro:ur_arm_transmission prefix="${prefix}" hw_interface="${transmission_hw_interface}" />-->
+  <!-- Placeholder for ros2_control transmission which don't yet exist -->
+
+
+  
+  <link name="UR4_quick_change_robot_side">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/common/Quick_Changer_RobotSide_v2.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.008"/>
+      <geometry>
+        <cylinder length="0.015" radius="0.045"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR4_gripper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="UR4_gripper">
+      <origin rpy="3.1415 -1.5708 0" xyz="0.0075 0.0055 0 "/>
+      <geometry>
+        <mesh filename="file:///home/divyam/four_ur_ws/install/ur_four/share/ur_four/onrobot_sg/models/onrobot_sg_b/meshes/SG-b_v1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <cylinder length="0.10" radius="0.049"/>
+        <!-- Still doesn't cover full gripper length, but we need to dip and cover objects to grasp, so left some room-->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="UR4_quick_changer_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <parent link="UR4_quick_change_robot_side"/>
+    <child link="UR4_gripper"/>
+  </joint>
+  <!-- <link name="world" /> -->
+  <link name="UR4_support_pillar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.5 0.7"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR4_rear_pillar_v1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR4_rear_pillar_v2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.045 0.05 2.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="UR4_rear_pillar_h">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10.0"/>
+      <inertia ixx="0.38299" ixy="0" ixz="0" iyy="31.09613" iyz="0" izz="31.47895"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.68 0.05 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="world" publish_pointcloud="true">
+    <origin xyz="-0.25 -0.36 1.25" rpy="0 0.7 1.5" />
+  </xacro:sensor_d435-->
+  <!-- <link name="vention_assembly">
+      <inertial>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <mass value="16.45"/>
+        <inertia ixx="15.78" ixy="6.8" ixz="-13.73" iyy="34.55" iyz="-2.76" izz="33.82"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+        <material name="5,5,5"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.25 -0.8 0" rpy="1.6 0 0"/>
+        <geometry>
+          <mesh filename="package://ur3e_irl_project/meshes/ventionassembly.stl" />
+        </geometry>
+      </collision>
+  </link> -->
+  <!-- fix the ur robot in place -->
+  <joint name="world_to_UR4_pillar" type="fixed">
+    <origin rpy="0 0 1.57" xyz="1.25 0.30 0.35"/>
+    <parent link="world"/>
+    <child link="UR4_support_pillar"/>
+  </joint>
+  <!-- <joint name="pillar_to_$(arg prefix_1)base" type="fixed">
+  <origin xyz="0 0.15 0.35" rpy="0 0 0"/>
+  <parent link="$(arg prefix_1)support_pillar"/>
+  <child link="$(arg prefix_1)base_link"/>
+  </joint> -->
+  <joint name="pillar_to_UR4_rear_pillar_v1" type="fixed">
+    <origin rpy="0 0 0" xyz="0.34 -0.25 0.7"/>
+    <parent link="UR4_support_pillar"/>
+    <child link="UR4_rear_pillar_v1"/>
+  </joint>
+  <joint name="pillar_to_UR4_rear_pillar_v2" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.34 -0.25 0.7"/>
+    <parent link="UR4_support_pillar"/>
+    <child link="UR4_rear_pillar_v2"/>
+  </joint>
+  <joint name="pillar_to_UR4_rear_pillar_h" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.25 0.9"/>
+    <parent link="UR4_support_pillar"/>
+    <child link="UR4_rear_pillar_h"/>
+  </joint>
+  <!-- <joint name="world_to_assembly" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="vention_assembly"/>
+  </joint> -->
+  <!-- <joint name="vention_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="vention_assembly"/>
+    <child link="base_link"/>
+  </joint>  -->
+  <joint name="UR4_to_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <parent link="UR4_tool0"/>
+    <child link="UR4_quick_change_robot_side"/>
+  </joint>
+  <!-- fix the conveyor belt in place >
+  <joint name="world_to_conveyor_base" type="fixed">
+    <origin xyz="0 1 1.26458" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="conveyor_base"/>
+  </joint-->
+  <!-- <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint> -->
+  <gazebo reference="UR4_support_pillar">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR4_rear_pillar_v1">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR4_rear_pillar_v2">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="UR4_rear_pillar_h">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- <gazebo reference="vention_assembly">
+      <selfCollide>true</selfCollide>
+  </gazebo> -->
+  <gazebo reference="UR4_quick_change_robot_side">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <disable_collisions link1="UR4_base_link" link2="UR4_support_pillar" reason="Adjacent"/>
+  <!-- <disable_collisions link1="base_link" link2="vention_assembly" reason="Adjacent" /> -->
+  <disable_collisions link1="UR4_tool0" link2="UR4_quick_change_robot_side" reason="Adjacent"/>
+
+
+  
+  
+  <!-- Gazebo plugins -->
+  <gazebo reference="world">
+  </gazebo>
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>/home/divyam/four_ur_ws/src/ur_four/config/four_ur_controllers.yaml</parameters>
+      <!-- <controller_manager_node_name>controller_manager</controller_manager_node_name> -->
+    </plugin>
+  </gazebo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      <!-- <plugin>mock_components/GenericSystem</plugin>
+      <param name="mock_sensor_commands">True</param>
+      <param name="state_following_offset">0.0</param>
+      <param name="calculate_dynamics">true</param> -->
+    </hardware>
+
+
+
+    
+    <!-- <joint name="UR2_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">1.25664</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR2_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-2.14675</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR2_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">1.93732</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR2_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">4.92183</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR2_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.5708</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR2_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.88496</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint> -->
+
+
+
+    <joint name="UR2_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.4924284179503047</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR2_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.0708117042883918</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR2_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-2.014945697534634</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR2_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">4.596521166273515</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR2_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-4.707813175200921</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR2_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">4.789886776339578</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+
+
+
+
+
+    <joint name="UR1_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.32645</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR1_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.13446</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR1_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.88496</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR1_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.69297</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR1_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-4.71239</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR1_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">1.81514</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+
+
+
+
+
+
+
+
+
+
+
+    <joint name="UR3_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.32645</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR3_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.13446</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR3_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.88496</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR3_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-1.69297</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR3_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">-4.71239</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR3_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <!-- initial position for the mock system and simulation -->
+        <param name="initial_value">1.81514</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <joint name="UR4_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">1.25664</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR4_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-2.14675</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR4_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">1.93732</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR4_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">4.92183</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR4_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.5708</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="UR4_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.88496</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint> -->
+
+
+
+    <joint name="UR4_shoulder_pan_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-5.001399543837835</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR4_shoulder_lift_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-2.1818835561104315</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR4_elbow_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">1.9760449971995246</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR4_wrist_1_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.365699271211924</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR4_wrist_2_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">4.710647364752554</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+    <joint name="UR4_wrist_3_joint">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">-1.859260222908152</param>
+      </state_interface>
+      <state_interface name="velocity"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="effort"><param name="initial_value">0.0</param></state_interface>
+    </joint>
+
+
+
+
+    
+  </ros2_control>
+
+
+
+  <!-- Plugins for simulating onion grabbing -->
+
+  <gazebo>
+
+    <plugin name="gz::sim::systems::DynamicDetachableJoint"
+            filename="libgz-sim-dynamic_detachable_joint-system.so">
+      <parent_link>UR1_wrist_3_link</parent_link>
+      <service_name>/ddj/UR1_wrist_3_link</service_name>
+      <output_topic>/ddj/UR1_wrist_3_link/state</output_topic>
+      <attach_distance>1.0</attach_distance>
+    </plugin>
+
+    <plugin name="gz::sim::systems::DynamicDetachableJoint"
+            filename="libgz-sim-dynamic_detachable_joint-system.so">
+      <parent_link>UR2_wrist_3_link</parent_link>
+      <service_name>/ddj/UR2_wrist_3_link</service_name>
+      <output_topic>/ddj/UR2_wrist_3_link/state</output_topic>
+      <attach_distance>1.0</attach_distance>
+    </plugin>
+
+    <plugin name="gz::sim::systems::DynamicDetachableJoint"
+            filename="libgz-sim-dynamic_detachable_joint-system.so">
+      <parent_link>UR3_wrist_3_link</parent_link>
+      <service_name>/ddj/UR3_wrist_3_link</service_name>
+      <output_topic>/ddj/UR3_wrist_3_link/state</output_topic>
+      <attach_distance>1.0</attach_distance>
+    </plugin>
+
+    <plugin name="gz::sim::systems::DynamicDetachableJoint"
+            filename="libgz-sim-dynamic_detachable_joint-system.so">
+      <parent_link>UR4_wrist_3_link</parent_link>
+      <service_name>/ddj/UR4_wrist_3_link</service_name>
+      <output_topic>/ddj/UR4_wrist_3_link/state</output_topic>
+      <attach_distance>1.0</attach_distance>
+    </plugin>
+
+
+
+    <!-- Gazebo Harmonic contact publisher -->
+    <!-- <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system"/> -->
+
+
+  </gazebo>
+
+    
+</robot>
