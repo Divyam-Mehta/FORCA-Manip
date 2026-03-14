@@ -141,7 +141,7 @@ User / Researcher
 ---
 
 ## Setup Instructions
-Prerequisites
+### Prerequisites
 
 Make sure the following are installed in your ROS 2 environment:
 
