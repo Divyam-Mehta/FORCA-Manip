@@ -88,6 +88,24 @@ The project is built around two main ROS 2 packages:
 - `ur_four_moveit_config`  
   Contains MoveIt 2 configuration assets such as planning pipelines, joint limits, kinematics, servo settings, SRDF, and launch files for visualization and planning.
 
+## Associated Thesis
+
+This repository accompanies the following thesis:
+
+@phdthesis{
+author={Mehta,Divyam},
+year={2025},
+title={Decentralized Collision Avoidance and Motion Planning for Multi-Robot Manipulator Systems},
+journal={ProQuest Dissertations and Theses},
+pages={52},
+note={Copyright - Database copyright ProQuest LLC; ProQuest does not claim copyright in the individual underlying works; Last updated - 2026-02-06},
+abstract={We present Fast-ORCA (FORCA), a decentralized collision-avoidance and motion-planning framework for multi-robot manipulators performing precision sorting tasks. FORCA adapts Optimal Reciprocal Collision Avoidance and translates velocity control to position control. At each cycle it selects a collision-free end-effector displacement using 3D velocity-obstacle geometry and accepts it only if it yields a valid inverse-kinematics solution. The pose is then connected by an RRTConnect path retimed by a waypoint speed-control module so that the executed motion matches the FORCA velocity command. We evaluate four UR3e arms in Gazebo Harmonic under Far and Near inspection layouts and onion densities from 30 to 50. Compared with a greedy Straight-to-Goal baseline, FORCA reduces inter-robot collisions from anywhere within 0–10 per run to zero while reducing total throughput by only 2–9% (e.g., 14.95 to 14.33 onions/min at 30-onion Near Inspection).},
+keywords={Robotic manipulators; Optimal Reciprocal Collision Avoidance; Decentralized planning; Precision sorting; Collaborative robots; Robotics; Computer science; Artificial intelligence; 0771:Robotics; 0984:Computer science; 0800:Artificial intelligence},
+isbn={9798276018447},
+language={English},
+url={https://www.proquest.com/dissertations-theses/decentralized-collision-avoidance-motion-planning/docview/3300997438/se-2},
+}
+
 ### Conceptual architecture
 
 ```text
