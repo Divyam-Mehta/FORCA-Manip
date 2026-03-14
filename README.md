@@ -140,7 +140,7 @@ User / Researcher
 
 ---
 
-Setup Instructions
+## Setup Instructions
 Prerequisites
 
 Make sure the following are installed in your ROS 2 environment:
