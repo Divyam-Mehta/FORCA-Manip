@@ -155,16 +155,43 @@ Make sure the following are installed in your ROS 2 environment:
 
 - Any additional dependencies used by `ur_four` and `ur_four_moveit_config`
 
-### Clone the Repository
+### Clone the Repository:
 
 ```bash
 git clone https://github.com/Divyam-Mehta/FORCA-Manip.git
 cd FORCA-Manip
 ```
 
-Build the workspace root:
+### Build the Workspace:
 
 ```bash
 colcon build --symlink-install
 source install/setup.bash
+```
+
+### Run the Simulation:
+
+Launch the Gazebo world containing **four Universal Robots (URs)**, a **conveyor**, **four bins**, and **four cameras**. This also loads the `joint_trajectory_controller` for all four manipulators:
+```bash
+ros2 launch ur_four ur_gazebo.launch.py
+```
+
+Launch RViz and MoveIt:
+```bash
+ros2 launch ur_four_moveit_config ur_moveit.launch.py
+```
+
+Spawn onions randomly on the conveyor:
+```bash
+ros2 launch ur_four onion_spawner.launch.py
+```
+
+Run the FORCA-based precision sorting simulation:
+```bash
+ros2 launch ur_four forca.launch.py
+```
+
+Run the greedy Straight-to-Goal (STG) baseline simulation:
+```bash
+ros2 launch ur_four baseline.launch.py
 ```
