@@ -136,3 +136,21 @@ User / Researcher
         ├── RViz visualization
         ├── Gazebo monitoring
         └── qualitative / quantitative analysis
+```
+
+---
+
+Setup Instructions
+Prerequisites
+
+Make sure the following are installed in your ROS 2 environment:
+
+ROS 2 - Jazzy
+
+MoveIt 2
+
+Gazebo Harmonic
+
+required UR robot dependencies
+
+any additional dependencies used by `ur_four` and `ur_four_moveit_config`
