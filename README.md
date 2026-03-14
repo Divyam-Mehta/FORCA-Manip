@@ -154,3 +154,11 @@ Make sure the following are installed in your ROS 2 environment:
 - Required UR robot dependencies
 
 - Any additional dependencies used by `ur_four` and `ur_four_moveit_config`
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Divyam-Mehta/FORCA-Manip.git
+cd FORCA-Manip
+```
+
