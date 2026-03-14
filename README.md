@@ -1,17 +1,6 @@
 # FORCA-Manip
 
-**FORCA-Manip** is a ROS 2 + MoveIt 2 research framework for **decentralized collision avoidance and motion planning in multi-manipulator systems**. The repository is organized around a four-robot Universal Robots simulation setup and is intended for research, benchmarking and reproducible experimentation in shared-workspace manipulation.
-
-The project combines:
-- a **Gazebo-based multi-robot simulation environment**
-- **MoveIt 2** for planning and execution
-- a **decentralized ORCA-inspired coordination layer**
-- baseline methods for comparison against the proposed FORCA pipeline
-
-
-# FORCA-Manip
-
-**FORCA-Manip** is the official code repository accompanying the Master's thesis **“Decentralized Collision Avoidance and Motion Planning for Multi-Robot Manipulator Systems”** by **Divyam Mehta**, submitted to the **University of Georgia** in partial fulfillment of the requirements for the degree of **Master of Science** (2025). The thesis was completed under the direction of **Prashant Doshi**. :contentReference[oaicite:2]{index=2}
+**FORCA-Manip** is the official code repository accompanying the Master's thesis **“Decentralized Collision Avoidance and Motion Planning for Multi-Robot Manipulator Systems”** by **Divyam Mehta**, submitted to the **University of Georgia** in partial fulfillment of the requirements for the degree of **Master of Science** (2025). The thesis was completed under the direction of **Dr. Prashant Doshi**.
 
 This repository implements **Fast-ORCA (FORCA)**, a decentralized collision-avoidance and motion-planning framework for **multi-robot manipulators performing precision sorting tasks**. FORCA adapts Optimal Reciprocal Collision Avoidance (ORCA) to articulated manipulators by translating velocity control into position control, validating candidate end-effector displacements through inverse kinematics, and retiming RRTConnect-generated paths so that executed motion remains consistent with the FORCA velocity command. :contentReference[oaicite:3]{index=3}
 
