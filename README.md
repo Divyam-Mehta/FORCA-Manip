@@ -2,13 +2,13 @@
 
 **FORCA-Manip** is the official code repository accompanying the thesis **“Decentralized Collision Avoidance and Motion Planning for Multi-Robot Manipulator Systems”** by **Divyam Mehta**. This repository presents the implementation of **Fast-ORCA (FORCA)**, a decentralized collision-avoidance and motion-planning framework for multi-robot manipulators performing precision sorting tasks in a shared workspace.
 
-The project is built on **ROS 2**, **MoveIt 2**, and **Gazebo Harmonic**, and focuses on enabling multiple robotic manipulators to operate simultaneously with reduced collision risk while preserving task throughput.
+The project is built on **ROS 2 - Jazzy**, **MoveIt 2** and **Gazebo Harmonic**, and focuses on enabling multiple robotic manipulators to operate simultaneously with reduced collision risk while preserving task throughput.
 
 ---
 
 ## Project Overview
 
-Coordinating multiple robotic manipulators in a shared environment is a challenging problem in robotics. Each robot must achieve its own task objective while simultaneously accounting for neighboring robots, shared obstacles, limited workspace, and execution constraints. As the number of manipulators grows, naïve independent planning often becomes unsafe, while centralized planning becomes increasingly expensive and difficult to scale.
+Coordinating multiple robotic manipulators in a shared environment is a challenging problem in robotics. Each robot must achieve its own task objective while simultaneously accounting for neighboring robots, shared obstacles, limited workspace and execution constraints. As the number of manipulators grows, naive independent planning often becomes unsafe while centralized planning becomes increasingly expensive and difficult to scale.
 
 FORCA-Manip addresses this problem by integrating:
 - a **Gazebo-based multi-robot simulation environment**
@@ -27,7 +27,7 @@ The repository is centered around a **four-robot Universal Robots simulation set
 
 ## Problem Statement
 
-In a multi-robot manipulator system, several robotic arms operate simultaneously in a common workspace. Even if each manipulator has a feasible individual plan, simultaneous execution may still lead to unsafe interactions such as collisions, deadlocks, or inefficient motion.
+In a multi-robot manipulator system, several robotic arms operate simultaneously in a common workspace. Even if each manipulator has a feasible individual plan, simultaneous execution may still lead to unsafe interactions such as collisions, deadlocks or inefficient motion.
 
 This creates several major challenges:
 
@@ -41,9 +41,9 @@ This creates several major challenges:
    Safe simultaneous execution requires continuous coordination rather than one-time path generation alone.
 
 4. **Realistic deployment constraints**  
-   Practical solutions must work with robot kinematics, inverse kinematics, collision checking, controller interfaces, and motion-planning infrastructure that resemble real deployment settings.
+   Practical solutions must work with robot kinematics, inverse kinematics, collision checking, controller interfaces and motion-planning infrastructure that resemble real deployment settings.
 
-The goal of FORCA-Manip is to provide a framework in which **decentralized collision avoidance and manipulation planning can be studied together**, while maintaining motion feasibility, task progress, and compatibility with standard robotics software tools.
+The goal of FORCA-Manip is to provide a framework in which **decentralized collision avoidance and manipulation planning can be studied together** while maintaining motion feasibility, task progress and compatibility with standard robotics software tools.
 
 ---
 
@@ -71,20 +71,13 @@ The repository includes:
 - a four-robot Gazebo simulation setup
 - MoveIt 2 configuration for the multi-robot system
 - baseline implementations for comparison
-- launch utilities for simulation, planning, and experiments
+- launch utilities for simulation, planning and experiments
 
 ### Main research executable
 
 The core implementation centers around the FORCA-based multi-robot execution logic, including the main research executable:
 
-- `multi_thread_psort_orca`
-
-### Example baseline executables
-
-Depending on your package layout, the repository may also include executables such as:
-- `baseline`
-- `centralized_baseline`
-- `dec_rrt_baseline`
+- `multi_thread_psort_orca.cpp`
 
 ---
 
@@ -93,7 +86,7 @@ Depending on your package layout, the repository may also include executables su
 The project is organized around two main ROS 2 packages:
 
 - `ur_four`  
-  Contains the multi-robot simulation environment, URDF/Xacro assets, controllers, task objects, Gazebo launches, and research executables.
+  Contains the multi-robot simulation environment, URDF/Xacro assets, controllers, task objects, Gazebo launches and research executables.
 
 - `ur_four_moveit_config`  
   Contains MoveIt 2 configuration assets such as planning pipelines, joint limits, kinematics, servo settings, semantic descriptions, and launch files for planning and visualization.
@@ -101,7 +94,7 @@ The project is organized around two main ROS 2 packages:
 ### Conceptual architecture
 
 ```text
-User / Researcher
+      User 
         │
         ▼
  Experiment Launch Layer
