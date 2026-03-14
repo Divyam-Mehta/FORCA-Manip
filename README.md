@@ -162,3 +162,9 @@ git clone https://github.com/Divyam-Mehta/FORCA-Manip.git
 cd FORCA-Manip
 ```
 
+Build the workspace root:
+
+```bash
+colcon build --symlink-install
+source install/setup.bash
+```
