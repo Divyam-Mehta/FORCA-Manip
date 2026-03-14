@@ -145,12 +145,12 @@ User / Researcher
 
 Make sure the following are installed in your ROS 2 environment:
 
-ROS 2 - Jazzy
+- ROS - Jazzy
 
-MoveIt 2
+- MoveIt 2
 
-Gazebo Harmonic
+- Gazebo Harmonic
 
-required UR robot dependencies
+- Required UR robot dependencies
 
-any additional dependencies used by `ur_four` and `ur_four_moveit_config`
+- Any additional dependencies used by `ur_four` and `ur_four_moveit_config`
