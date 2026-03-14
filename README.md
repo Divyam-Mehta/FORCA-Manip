@@ -1,14 +1,12 @@
 # FORCA-Manip
 
-**FORCA-Manip** is a ROS 2 + MoveIt 2 research framework for **decentralized collision avoidance and motion planning in multi-manipulator systems**. The repository is organized around a four-robot Universal Robots simulation setup and is intended for research, benchmarking, and reproducible experimentation in shared-workspace manipulation.
+**FORCA-Manip** is a ROS 2 + MoveIt 2 research framework for **decentralized collision avoidance and motion planning in multi-manipulator systems**. The repository is organized around a four-robot Universal Robots simulation setup and is intended for research, benchmarking and reproducible experimentation in shared-workspace manipulation.
 
 The project combines:
 - a **Gazebo-based multi-robot simulation environment**
 - **MoveIt 2** for planning and execution
 - a **decentralized ORCA-inspired coordination layer**
 - baseline methods for comparison against the proposed FORCA pipeline
-
-This repository is designed to present the project in a clean, research-grade format suitable for academic sharing, thesis support, and future publication.
 
 ---
 
