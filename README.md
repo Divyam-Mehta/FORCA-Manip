@@ -91,46 +91,6 @@ The project is organized around two main ROS 2 packages:
 - `ur_four_moveit_config`  
   Contains MoveIt 2 configuration assets such as planning pipelines, joint limits, kinematics, servo settings, semantic descriptions, and launch files for planning and visualization.
 
-### Conceptual architecture
-
-```text
-      User 
-        │
-        ▼
- Experiment Launch Layer
-        │
-        ├── Gazebo simulation launch
-        ├── MoveIt launch
-        └── FORCA / baseline launch
-        │
-        ▼
- Multi-Robot World (ROS 2 + Gazebo Harmonic)
-        │
-        ├── 4x UR manipulators
-        ├── controllers
-        ├── robot_state_publisher
-        ├── ros_gz bridge
-        ├── static transforms
-        └── task objects / sorting environment
-        │
-        ▼
- Planning + Coordination Layer
-        │
-        ├── MoveIt 2 planning interface
-        ├── inverse kinematics validation
-        ├── collision checking
-        ├── FORCA decentralized coordination
-        └── baseline comparison methods
-        │
-        ▼
- Execution + Evaluation
-        │
-        ├── trajectory execution
-        ├── RViz visualization
-        ├── Gazebo monitoring
-        └── qualitative / quantitative analysis
-```
-
 ---
 
 ## Setup Instructions
