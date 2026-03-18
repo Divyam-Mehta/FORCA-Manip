@@ -13,6 +13,11 @@
   </tr>
 </table>
 
+<p align="center">
+  Additional simulation results and full demo videos are available here:
+  <a href="https://drive.google.com/drive/folders/16-SdaghwqF-CSBp_GTTzBJd5EdpWuXvy?usp=drive_link"><b>Gazebo simulation videos</b></a>
+</p>
+
 **FORCA-Manip** is the official code repository accompanying the thesis **“Decentralized Collision Avoidance and Motion Planning for Multi-Robot Manipulator Systems”** by **Divyam Mehta**. This repository presents the implementation of **Fast-ORCA (FORCA)**, a decentralized collision-avoidance and motion-planning framework for multi-robot manipulators performing precision sorting tasks in a shared workspace.
 
 The project is built on **ROS 2 - Jazzy**, **MoveIt 2** and **Gazebo Harmonic**, and focuses on enabling multiple robotic manipulators to operate simultaneously with reduced collision risk while preserving task throughput.
