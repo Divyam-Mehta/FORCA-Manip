@@ -3,11 +3,11 @@
 <table>
   <tr>
     <td align="center">
-      <img src="media/Near_Inspection.gif" width="450" /><br />
+      <img src="media/Near_Inspection.gif" width="480" /><br />
       <span style="color:red;"><b>Near Inspection</b></span>
     </td>
     <td align="center">
-      <img src="media/Far_Inspection.gif" width="450" /><br />
+      <img src="media/Far_Inspection.gif" width="480" /><br />
       <span style="color:red;"><b>Far Inspection</b></span>
     </td>
   </tr>
